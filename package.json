@@ -19,6 +19,7 @@
     "@astrojs/tailwind": "^5.1.0",
     "@iconify-json/ion": "^1.1.15",
     "@iconify-json/mdi": "^1.1.64",
+    "@types/react": "^18.2.59",
     "@typescript-eslint/eslint-plugin": "^7.0.2",
     "@typescript-eslint/parser": "^7.0.2",
     "accessible-astro-components": "^2.3.5",
