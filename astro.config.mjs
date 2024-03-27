@@ -9,11 +9,7 @@ import cloudflare from "@astrojs/cloudflare";
 export default defineConfig({
   output: "server",
   adapter: cloudflare({
-    runtime: {
-      mode: "local"
-    },
     imageService: "cloudflare",
-    functionPerRoute: true
   }),
   compressHTML: true,
   integrations: [mdx(), icon(), tailwind({
