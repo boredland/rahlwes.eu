@@ -1,7 +1,7 @@
 module.exports = {
     ci: {
       collect: {
-        numberOfRuns: "2",
+        numberOfRuns: "1",
         settings: {
           extraHeaders: '{"Cookie": "vercel-live-feedback-optout=1"}',
           skipAudits: ["is-crawlable"],
