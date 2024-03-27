@@ -34,5 +34,7 @@ jobs:
           urls: |
             ${{ steps.cf.outputs.url }}/en/
             ${{ steps.cf.outputs.url }}/de/
+            ${{ steps.cf.outputs.url }}/en/team/
+            ${{ steps.cf.outputs.url }}/de/team/
           uploadArtifacts: true # save results as an action artifacts
           temporaryPublicStorage: true # upload lighthouse report to the temporary storage
