@@ -67,7 +67,7 @@ export { getStaticPaths } from '../../utils/i18n'
     <Accordion>
       <AccordionItem header={t('team.speeches')}>
         <ul class="list-disc px-4">
-          <li>{t('home.conditions.consulting.li1')}</li>
+          {(t('team.ellen.speeches') as string[]).map((publication) => <li>{publication}</li>)}
         </ul>
       </AccordionItem>
       <AccordionItem header={t('team.publications')}>

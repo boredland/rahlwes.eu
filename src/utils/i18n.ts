@@ -6,7 +6,7 @@ export type Locale = (typeof locales)[number]
 const translations = {
   en,
   de,
-} satisfies Record<Locale, Record<string, string>>
+} satisfies Record<Locale, Record<string, string | string[]>>
 
 export const getLangFromUrl = (url: URL) => {
   const [, lang] = url.pathname.split('/')
