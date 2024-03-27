@@ -1,25 +1,35 @@
 name: Lighthouse CI
 on:
-    issue_comment:
-      types: [created, edited]
+  issue_comment:
+    types: [created, edited]
     
 jobs:
   lighthouse:
     runs-on: ubuntu-latest
-    if: ${{ github.event.issue.pull_request && github.event.comment.user.name == 'cloudflare-pages' }}
+    if: ${{ contains(github.event.comment.user.login, 'cloudflare') && !contains(github.event.comment.body, 'in progress')  }}
+    permissions:
+      actions: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: xt0rted/pull-request-comment-branch@v2
+        id: comment-branch
       - name: Get Deployment URL
         id: get_deployment_url
         run: |
           URL=$(echo "${{ github.event.comment.body }}" | grep href | grep -Eo 'https://[a-zA-Z0-9./?=_%:-]*' | sort -u | head -n 1)
+          SHA=$(echo "${{ github.event.comment.body }}" | grep code | grep -o -P '(?<=<code>).*(?=</code>)')
+          echo "sha=$(git rev-parse $SHA)" >> $GITHUB_OUTPUT
           echo "url=$URL" >> $GITHUB_OUTPUT
+      - uses: actions/checkout@v4
       - name: Audit URLs using Lighthouse
         uses: treosh/lighthouse-ci-action@v11
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+          LHCI_GITHUB_TOKEN: ${{ github.token}}
+          LHCI_BUILD_CONTEXT__CURRENT_HASH: ${{ steps.get_deployment_url.outputs.sha || github.sha }}
         with:
+          configPath: ./.lighthouserc.cjs
           urls: |
             ${{ steps.get_deployment_url.outputs.url }}/en/
             ${{ steps.get_deployment_url.outputs.url }}/de/
           uploadArtifacts: true # save results as an action artifacts
           temporaryPublicStorage: true # upload lighthouse report to the temporary storage
-          
