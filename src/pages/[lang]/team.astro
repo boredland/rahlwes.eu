@@ -1,6 +1,12 @@
 ---
+import ContentMedia from "../../components/ContentMedia.astro"
 import DefaultLayout from '../../layouts/DefaultLayout.astro'
 import { useTranslations, type Locale } from '../../utils/i18n'
+import anka from '../../assets/img/anka-sitzend.webp'
+import ellen from '../../assets/img/ellen-lesend.webp'
+import fotokiste from '../../assets/img/fotokiste.webp'
+import buchhand from '../../assets/img/buchhand.webp'
+import { Accordion, AccordionItem } from "accessible-astro-components"
 
 const t = useTranslations(Astro.currentLocale as Locale)
 
@@ -15,4 +21,70 @@ export { getStaticPaths } from '../../utils/i18n'
       </h1>
     </div>
   </section>
+
+  <ContentMedia imgSrc={anka}>
+    <h2 class="text-center">{"Ann-Kathrin Rahlwes"}</h2>
+    <h3 class="text-center">{"M.A. Politikwissenschaft, Mittlere und Neuere Geschichte sowie Philosophie"}</h3>
+    <p class="text-2xl">
+      {t('team.anka.text')}
+    </p>
+  </ContentMedia>
+
+  <ContentMedia imgSrc={fotokiste} reverseImg>
+    <h3 class="text-center">{t('team.about')}</h3>
+    <p class="text-2xl">
+      {t('team.anka.about')}
+    </p>
+
+    <Accordion>
+      <AccordionItem header={t('team.speeches')}>
+        <ul class="list-disc px-4">
+          <li>{t('home.conditions.consulting.li1')}</li>
+        </ul>
+      </AccordionItem>
+      <AccordionItem header={t('team.publications')}>
+        <p>
+          {t('home.conditions.facts.p1')}
+        </p>
+      </AccordionItem>
+      <AccordionItem header={t('team.exhibitions')}>
+        <p>
+          {t('home.conditions.searches.p1')}
+        </p>
+      </AccordionItem>
+    </Accordion>
+  </ContentMedia>
+
+  <ContentMedia imgSrc={ellen}>
+    <h2 class="text-center">{"Ann-Kathrin Rahlwes"}</h2>
+    <h3 class="text-center">{"M.A. Kunstgeschichte, Neuere deutsche Literatur und Philosophie"}</h3>
+    <p class="text-2xl">
+      {t('team.ellen.text')}
+    </p>
+  </ContentMedia>
+
+  <ContentMedia imgSrc={buchhand} reverseImg>
+    <h3 class="text-center">{t('team.about')}</h3>
+    <p class="text-2xl">
+      {t('team.ellen.about')}
+    </p>
+
+    <Accordion>
+      <AccordionItem header={t('team.speeches')}>
+        <ul class="list-disc px-4">
+          <li>{t('home.conditions.consulting.li1')}</li>
+        </ul>
+      </AccordionItem>
+      <AccordionItem header={t('team.publications')}>
+        <p>
+          {t('home.conditions.facts.p1')}
+        </p>
+      </AccordionItem>
+      <AccordionItem header={t('team.exhibitions')}>
+        <p>
+          {t('home.conditions.searches.p1')}
+        </p>
+      </AccordionItem>
+    </Accordion>
+  </ContentMedia>
 </DefaultLayout>
