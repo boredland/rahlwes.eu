@@ -6,7 +6,7 @@ on:
 jobs:
   lighthouse:
     runs-on: ubuntu-latest
-    if: ${{ github.event.issue.pull_request && github.event.comment.user.name == 'cloudflare-pages' }}
+    if: ${{ contains(github.event.comment.user.login, 'cloudflare') && !contains(github.event.comment.body, 'in progress')  }}
     steps:
       - uses: actions/checkout@v4
       - name: Get Deployment URL
@@ -16,10 +16,12 @@ jobs:
           echo "url=$URL" >> $GITHUB_OUTPUT
       - name: Audit URLs using Lighthouse
         uses: treosh/lighthouse-ci-action@v11
+        env:
+            LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
         with:
+          configPath: ./lighthouserc.cjs
           urls: |
             ${{ steps.get_deployment_url.outputs.url }}/en/
             ${{ steps.get_deployment_url.outputs.url }}/de/
           uploadArtifacts: true # save results as an action artifacts
           temporaryPublicStorage: true # upload lighthouse report to the temporary storage
-          
