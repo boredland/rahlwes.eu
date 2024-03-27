@@ -11,7 +11,8 @@ export default defineConfig({
   adapter: cloudflare({
     runtime: {
       mode: "local"
-    }
+    },
+    imageService: "cloudflare"
   }),
   compressHTML: true,
   integrations: [mdx(), icon(), tailwind({
@@ -25,5 +26,13 @@ export default defineConfig({
       prefixDefaultLocale: true,
       redirectToDefaultLocale: true
     }
-  }
+  },
+  image: {
+    service: {
+       entrypoint: 'astro/assets/services/sharp',
+       config: {
+         limitInputPixels: false,
+      },
+     },
+  },
 });
