@@ -2,14 +2,14 @@
 import ResponsiveToggle from './ResponsiveToggle.astro'
 import { DarkMode } from 'accessible-astro-components'
 import { Image } from 'astro:assets'
-import logo from '../../public/logo.svg'
+import logo from "../assets/logo.svg"
 import { getRelativeLocaleUrl } from 'astro:i18n'
 ---
 
 <div id="main-navigation" class="is-desktop py-8">
   <div class="container">
     <a href={getRelativeLocaleUrl(Astro.currentLocale ?? "de")} class="flex items-center gap-6 !no-underline">
-      <Image src={logo} alt="Logo: Rahlwes - Historical Research Service" width="30" height="30" />
+      <Image src={logo} alt="Logo: Rahlwes - Historical Research Service" width="30" height="30" format="svg" loading={"lazy"} />
 
       <span class="font-bold max-sm:hidden">Rahlwes. Historical research.</span>
     </a>
