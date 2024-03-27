@@ -1,3 +1,7 @@
 ---
-return Astro.redirect(`/${Astro.currentLocale}`);
+import { getHeadersLocale } from '../utils/headersLocale'
+
+const locale = getHeadersLocale(Astro.request.headers.get('accept-language') ?? 'en')
+  
+return Astro.redirect(`/${locale}`)
 ---

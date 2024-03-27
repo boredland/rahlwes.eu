@@ -41,6 +41,7 @@
   "dependencies": {
     "@astrojs/check": "^0.5.10",
     "@astrojs/cloudflare": "^9.2.0",
+    "accept-language": "^3.0.18",
     "typescript": "^5.4.3"
   }
 }
