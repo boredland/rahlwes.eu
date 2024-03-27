@@ -25,4 +25,7 @@ yarn-error.log*
 
 # package lock
 package-lock.json
-.vercel
+
+# wrangler files
+.wrangler
+.dev.vars
