@@ -14,14 +14,14 @@ export const getLangFromUrl = (url: URL) => {
   return "en" as const
 }
 
-export const useTranslations = (lang: string) => {
+export const useTranslations = (lang: Locale = "de") => {
   return function t(key: keyof (typeof translations)["en"]) {
     const dict = translations[lang] ?? translations.en;
     return dict[key]
   }
 }
 
-export const getCurrentLocalizedPath = (url: URL, lang: Locale) => {
+export const getCurrentLocalizedPath = (url: URL, lang: Locale = "de") => {
   const path = url.pathname.split('/')
   path[1] = lang
   return path.join('/')

@@ -9,7 +9,7 @@ import { getCurrentLocalizedPath } from "../utils/i18n"
   <SkipLinks />
   <Navigation>
     <li class="menu-item">
-      <a href={getRelativeLocaleUrl(Astro.currentLocale)}>Home</a>
+      <a href={getRelativeLocaleUrl(Astro.currentLocale ?? "de")}>Home</a>
     </li>
 
     {

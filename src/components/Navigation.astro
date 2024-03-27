@@ -8,7 +8,7 @@ import { getRelativeLocaleUrl } from 'astro:i18n'
 
 <div id="main-navigation" class="is-desktop py-8">
   <div class="container">
-    <a href={getRelativeLocaleUrl(Astro.currentLocale)} class="flex items-center gap-6 !no-underline">
+    <a href={getRelativeLocaleUrl(Astro.currentLocale ?? "de")} class="flex items-center gap-6 !no-underline">
       <Image src={logo} alt="Logo: Rahlwes - Historical Research Service" width="30" height="30" />
 
       <span class="font-bold max-sm:hidden">Rahlwes. Historical research.</span>
@@ -112,7 +112,7 @@ import { getRelativeLocaleUrl } from 'astro:i18n'
         }
 
         if (targetItem) {
-          targetItem.querySelector('a, button, input').focus()
+          targetItem.querySelector('a, button, input')?.scrollIntoView()
         }
       })
 
