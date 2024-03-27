@@ -1,35 +1,36 @@
-import { defineConfig } from 'astro/config';
-import mdx from '@astrojs/mdx';
-import tailwind from '@astrojs/tailwind';
-import compress from 'astro-compress';
-import icon from "astro-icon";
-import cloudflare from "@astrojs/cloudflare";
+import { defineConfig } from 'astro/config'
+import mdx from '@astrojs/mdx'
+import tailwind from '@astrojs/tailwind'
+import cloudflare from '@astrojs/cloudflare'
 
 // https://astro.build/config
 export default defineConfig({
-  output: "server",
+  output: 'server',
   adapter: cloudflare({
-    imageService: "cloudflare",
+    imageService: 'cloudflare',
   }),
   compressHTML: true,
-  integrations: [mdx(), icon(), tailwind({
-    applyBaseStyles: false
-  }), compress()],
-  trailingSlash: "ignore",
+  integrations: [
+    mdx(),
+    tailwind({
+      applyBaseStyles: false,
+    }),
+  ],
+  trailingSlash: 'ignore',
   i18n: {
     locales: ['en', 'de'],
     defaultLocale: 'de',
     routing: {
       prefixDefaultLocale: true,
-      redirectToDefaultLocale: true
-    }
+      redirectToDefaultLocale: true,
+    },
   },
   image: {
     service: {
-       entrypoint: 'astro/assets/services/sharp',
-       config: {
-         limitInputPixels: false,
+      entrypoint: 'astro/assets/services/sharp',
+      config: {
+        limitInputPixels: false,
       },
-     },
+    },
   },
-});
+})

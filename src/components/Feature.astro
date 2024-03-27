@@ -1,11 +1,8 @@
 ---
-import { Icon } from 'astro-icon/components'
-
-const { icon, title = 'Title' } = Astro.props
+const { title = 'Title' } = Astro.props
 ---
 
 <div class="feature flex flex-col gap-4">
-  {icon && <Icon name={icon} />}
   <div class="content grid grid-cols-1 gap-3">
     <h3>{title}</h3>
     <p>
