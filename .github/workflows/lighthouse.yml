@@ -1,0 +1,22 @@
+name: Lighthouse CI
+on:
+    check_run:
+      types: [completed]
+    
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Get Deployment URL
+        id: get_deployment_url
+        run:
+          echo "url=$(echo "${{ github.event.check_run.output.summary }}" | grep -o "href\=.*>https" | cut -c 7-43)" >> $GITHUB_OUTPUT
+      - name: Audit URLs using Lighthouse
+        uses: treosh/lighthouse-ci-action@v11
+        with:
+          urls: |
+            https://${{ steps.get_deployment_url.outputs.url }}/en/
+            https://${{ steps.get_deployment_url.outputs.url }}/de/
+          uploadArtifacts: true # save results as an action artifacts
+          temporaryPublicStorage: true # upload lighthouse report to the temporary storage
