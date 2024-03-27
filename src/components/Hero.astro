@@ -1,9 +1,9 @@
 ---
-import { type Locale, useTranslations } from "../utils/i18n";
+import { type Locale, useTranslations } from '../utils/i18n'
+import anka from '../assets/img/anka-rtl.webp'
+import { Image } from 'astro:assets'
 
-const t = useTranslations(Astro.currentLocale as Locale);
-
-const { src = '/anka-rtl.webp' } = Astro.props
+const t = useTranslations(Astro.currentLocale as Locale)
 ---
 
 <section class="hero my-24">
@@ -11,21 +11,30 @@ const { src = '/anka-rtl.webp' } = Astro.props
     <div class="grid grid-cols-1 items-center gap-24 lg:grid-cols-2">
       <div class="flex flex-col items-center gap-8 md:items-start">
         <h1 class="text-center text-6xl md:text-left lg:text-8xl">
-          <slot>{t("home.h1")}</slot>
+          <slot>{t('home.h1')}</slot>
         </h1>
         <p>
-          {t("home.intro")}
+          {t('home.intro')}
         </p>
         <div class="flex flex-col gap-3 min-[500px]:flex-row">
           <a
             class="button color-primary"
             href="https://github.com/markteekman/accessible-astro-starter/blob/main/README.md"
           >
-            {t("home.more")}
+            {t('home.more')}
           </a>
         </div>
       </div>
-      <img class="hidden lg:block" src={src} alt="" decoding="async" />
+      <Image
+        widths={[1, anka.width]}
+        sizes={`(max-width: 1024px) 1px, ${anka.width}px`}
+        class="hidden lg:block"
+        src={anka}
+        alt=""
+        decoding="async"
+        format="webp"
+        loading={'eager'}
+      />
     </div>
   </div>
 </section>
