@@ -4,10 +4,26 @@
   "team.speeches": "Vorträge",
   "team.publications": "Publikationen",
   "team.exhibitions": "Ausstellungen",
+  "team.translations": "Übersetzungen",
   "team.ellen.about": "Welche Vorstellungen von Identität und Zugehörigkeit werden über Kunst und Kultur gebildet und transportiert? Als Kulturwissenschaftlerin erforsche ich, in welchen kulturellen, gesellschaftlichen und politischen Kontexten Kunstwerke, Texte und Institutionen entstanden sind. Mich interessieren besonders Fragen der Gedächtniskultur und Gedächtnispolitik, weil sich hier unser Umgang mit der Vergangenheit unmittelbar auf gegenwärtige und zukünftige Debatten auswirkt.",
   "team.ellen.text": "Kultur entsteht durch und im Austausch, deshalb sind mir in meiner Arbeit interdisziplinäre Perspektiven wichtig. Nach meinem Studium in Berlin und Paris begann ich 2018 mit einer Promotion über Aby Warburg im Schnittfeld von Kulturwissenschaft, Philosophie und Jüdischen Studien. Neue Impulse für meine Forschung finde ich durch die Mitarbeit an Konferenzen, Ausstellungen und Editionsprojekten. Mein Ziel ist es, für kulturwissenschaftliche Themen zu begeistern und Neugier zu wecken für die kulturellen Austauschprozesse, in die wir alle eingebunden sind.",
   "team.anka.about": "Mit meiner Arbeit möchte ich einen Beitrag dazu leisten, mehr Menschen für Geschichte zu begeistern und zu ermutigen, sich mit historischen Themen zu beschäftigen. Schon als 16-Jährige begann ich, mich in der historisch-politischen Bildungsarbeit bei der Bildungsstätte Anne Frank e.V. zu engagieren und es ist mir bis heute ein Anliegen, komplexe historische Zusammenhänge für jeden verständlich zu erzählen. 2013 entschied ich mich, historische Recherchen als Dienstleistung anzubieten. Bei meiner Arbeit werde ich von Ellen Rinner unterstützt.",
   "team.anka.text": "Wer waren die Menschen, die uns vorausgingen? Wie lebten und arbeiteten sie? Was war ihnen wichtig? Was unternahmen sie, um ihre Situation zu verändern? Diese Fragen helfen uns dabei, das Selbstverständnis und die Lebenswelt von Menschen zu erforschen und zu verstehen. Zeugnisse dieser Geschichten finden sich unter den Erinnerungsstücken einer Familie und in Archiven von Unternehmen, Städten sowie Museen. Es ist diese Spurensuche, die mich an meiner Arbeit begeistert.",
+  "team.anka.speeches": [
+    "Vortrag „Anne Frank and her family“ im Rahmen der Konferenz „Reappraising the Anne Frank Diaries: Contexts and Receptions“ des Fritz-Bauer-Instituts Frankfurt am Main und des Lichtenberg- Kollegs der Universität Göttingen, 15.04.2015",
+    "Vortrag „Erinnerungen an Kinder des Holocaust: Eine Ausstellung zu einer jüdischen Familie in Frankfurt“ im Rahmen der „Interdisciplinary Psychoanalytic Research Conference 2015: Approaching „children-at-risk“. Psychoanalytic and interdisciplinary research on traumatized children“ des Siegmund- Freud-Instituts, 01.03.2015",
+    "Workshop für Lehrer: Konzeption und Durchführung in Zusammenarbeit mit Gottfried Kößler, stellv. Direktor des Fritz-Bauer-Instituts, anlässlich von „Frankfurt liest ein Buch 2015“, am 04.02.2015 im Jüdischen Museum Frankfurt am Main.",
+    "Workshops für Lehrer und Studenten: Konzeption und Durchführung zu „Jüdische (Familien)biografien im Unterricht“ im Auftrag der Bildungsstätte Anne Frank e.V. für u.a. die Universität Erfurt, Juni bis Dezember 2014.",
+    "Werkstatt zur Vermittlung jüdischer Geschichte am Beispiel der Familie Frank: Konzeption und Durchführung im Auftrag der Bildungsstätte Anne Frank e.V. in Kooperation mit dem Pädagogischen Zentrum des Fritz-Bauer-Instituts und des Jüdischen Museum Frankfurts, 2013."
+  ],
+  "team.anka.publications": [
+    "Katalogbeitrag \"Die Familie Frank\" (mit Dr. Franziska Krah), in: \"Jüdisches Frankfurt. Von der Aufklärung bis zur Gegenwart.\" (Ausstellungskatalog des Jüdischen Museum Frankfurt am Main)",
+    "Begleitete Archivrecherche. Den \"schwierigen Dingen\" auf der Spur (mit Johannes Beermann-Schön), in: Historisches Museum Frankfurt (Hrsg.): Ausstellungsdokumentation Gekauft. Gesammelt. Geraubt? Vom Weg der Dinge ins Museum, Frankfurt am Main 2019, S. 84-87. · 1. Jan. 2019",
+    "Erfahrungsbericht. Recherche und Umgang mit Zeitzeugenberichten ehemaliger Frankfurter Schülerinnen und Schüler, in: Einsicht 2021. Bulletin des Fritz Bauer Instituts Frankfurt am Main · 1. Nov. 2021",
+    "Quiz und Stadtplan „Die Familie Frank in Frankfurt“: Konzeption und Realisation im Auftrag von Frankfurt liest ein Buch e.V., anlässlich von „Frankfurt liest Grüße und Küsse an alle. Die Geschichte der Familie von Anne Frank“, April 2015.",
+    "„Freiheitsrechte: Das Beispiel der Vorfahren und der Familie von Anne Frank.“ (mit Ricarda Wawra) im Auftrag der Bildungsstätte Anne Frank e.V. in Kooperation mit dem Pädagogischen Zentrum des Fritz-Bauer-Instituts und des Jüdischen Museum Frankfurts, 2013.",
+    "Artikel „Jüdisches Leben im 19.Jahrhundert. Die Geschichte der Familie Stern und Frank.“ für die pädagogische Fachzeitschrift Geschichte Lernen, Heft 152, 26. Jahrgang, März 2013."
+  ],
   "meta.description": "Wir recherchieren historische Themen und helfen, Wissen einfach, anschaulich und spannend zu vermitteln. Sprechen Sie uns an!",
   "home.title": "Startseite",
   "home.h1": "Welche Geschichte bewegt Sie?",

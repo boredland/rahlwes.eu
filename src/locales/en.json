@@ -4,10 +4,26 @@
   "team.speeches": "Speeches",
   "team.publications": "Publications",
   "team.exhibitions": "Exhibitions",
+  "team.translations": "Translations",
   "team.ellen.about": "What ideas of identity and belonging are formed and conveyed through art and culture? As a cultural scientist, I research the cultural, social, and political contexts in which artworks, texts, and institutions have emerged. I am particularly interested in questions of memory culture and memory politics, as our handling of the past here directly affects current and future debates.",
   "team.ellen.text": "Culture is created through and in exchange, which is why interdisciplinary perspectives are important to me in my work. After studying in Berlin and Paris, I began my doctoral research in 2018 on Aby Warburg at the intersection of cultural studies, philosophy, and Jewish studies. I find new inspiration for my research through participation in conferences, exhibitions, and editorial projects. My goal is to inspire enthusiasm for cultural studies topics and to foster curiosity about the cultural exchange processes in which we are all involved.",
   "team.anka.about": "With my work, I want to contribute to inspiring more people to be interested in history and encourage them to engage with historical topics. As a 16-year-old, I started getting involved in historical and political education at the Anne Frank Educational Center, and it has been my concern ever since to tell complex historical connections in a way that is understandable to everyone. In 2013, I decided to offer historical research as a service. I am supported in my work by Ellen Rinner.",
   "team.anka.text": "Who were the people who came before us? How did they live and work? What was important to them? What did they do to change their situation? These questions help us explore and understand the self-perception and life world of people. Testimonies of these stories can be found among the memorabilia of a family and in archives of companies, cities, and museums. It is this search for traces that excites me about my work.",
+  "team.anka.speeches": [
+    "Lecture \"Anne Frank and her family\" at the conference \"Reappraising the Anne Frank Diaries: Contexts and Receptions\" of the Fritz Bauer Institute Frankfurt am Main and the Lichtenberg Kolleg of the University of Göttingen, 15.04.2015",
+    "Lecture \"Erinnerungen an Kinder des Holocaust: Eine Ausstellung zu einer jüdischen Familie in Frankfurt\" at the \"Interdisciplinary Psychoanalytic Research Conference 2015: Approaching \"children-at-risk\". Psychoanalytic and interdisciplinary research on traumatized children\" of the Siegmund Freud Institute, 01.03.2015",
+    "Workshop for teachers: Conception and implementation in collaboration with Gottfried Kößler, Deputy Director of the Fritz Bauer Institute, on the occasion of \"Frankfurt liest ein Buch 2015\", on 04.02.2015 at the Jewish Museum Frankfurt am Main",
+    "Workshops for teachers and students: Conception and implementation on \"Jewish (family) biographies in the classroom\" on behalf of the Bildungsstätte Anne Frank e.V. for, among others, the University of Erfurt, June to December 2014.",
+    "Werkstatt zur Vermittlung jüdischer Geschichte am Beispiel der Familie Frank: Konzeption und Durchführung im Auftrag der Bildungsstätte Anne Frank e.V. in Kooperation mit dem Pädagogischen Zentrum des Fritz-Bauer-Instituts und des Jüdischen Museum Frankfurts, 2013."
+  ],
+  "team.anka.publications": [
+    "Catalogue article \"The Frank\" family (with Dr. Franziska Krah), in: \"Jewish Frankfurt. From the Enlightenment to the Present.\" (exhibition catalog of the Jewish Museum Frankfurt am Main)",
+    "Accompanied archive research. Tracking down the \"difficult things\" (with Johannes Beermann-Schön), in: Historisches Museum Frankfurt (ed.): Ausstellungsdokumentation Gekauft. Collected. Looted? Vom Weg der Dinge ins Museum, Frankfurt am Main 2019, pp. 84-87 - Jan. 1, 2019",
+    "Field report. Researching and dealing with eyewitness accounts of former Frankfurt schoolchildren, in: Insight 2021. Bulletin of the Fritz Bauer Institute Frankfurt am Main - Nov. 1, 2021",
+    "Quiz and city map \"The Frank family in Frankfurt\": Conception and realization on behalf of Frankfurt liest ein Buch e.V., on the occasion of \"Frankfurt liest Grüße und Küsse an alle. The story of Anne Frank's family\", April 2015.",
+    "\"Freedom rights: The example of Anne Frank's ancestors and family.\" (with Ricarda Wawra) on behalf of the Bildungsstätte Anne Frank e.V. in cooperation with the Pedagogical Center of the Fritz Bauer Institute and the Jewish Museum Frankfurt, 2013.",
+    "Article \"Jewish life in the 19th century. Die Geschichte der Familie Stern und Frank.\" for the educational journal Geschichte Lernen, issue 152, 26th year, March 2013."
+  ],
   "meta.description": "We research historical themes and help communicate knowledge in simple, clear and captivating terms. Get in touch!",
   "home.title": "Home",
   "home.h1": "What story moves you?",
