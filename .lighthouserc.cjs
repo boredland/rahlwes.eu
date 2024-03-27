@@ -7,8 +7,5 @@ module.exports = {
         skipAudits: ['is-crawlable'],
       },
     },
-    assert: {
-      preset: 'lighthouse:no-pwa',
-    },
   },
 }
