@@ -5,9 +5,9 @@ import cloudflare from '@astrojs/cloudflare'
 
 // https://astro.build/config
 export default defineConfig({
-  output: 'server',
+  output: "hybrid",
   adapter: cloudflare({
-    imageService: 'cloudflare',
+    imageService: "compile",
   }),
   compressHTML: true,
   integrations: [
@@ -23,14 +23,6 @@ export default defineConfig({
     routing: {
       prefixDefaultLocale: true,
       redirectToDefaultLocale: true,
-    },
-  },
-  image: {
-    service: {
-      entrypoint: 'astro/assets/services/sharp',
-      config: {
-        limitInputPixels: false,
-      },
     },
   },
 })
