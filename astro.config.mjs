@@ -12,7 +12,8 @@ export default defineConfig({
     runtime: {
       mode: "local"
     },
-    imageService: "cloudflare"
+    imageService: "cloudflare",
+    functionPerRoute: true
   }),
   compressHTML: true,
   integrations: [mdx(), icon(), tailwind({
