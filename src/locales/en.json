@@ -5,6 +5,11 @@
   "404.button": "Let's get you home 🏠",
   "families.title": "Families",
   "families.intro.h1": "Where do my ancestors come from?",
+  "families.intro.p": [
+    "Alte Familienfotos spiegeln das Familienleben und den Modegeschmack vergangener Tage wider. Akten dokumentieren Lebenswege von Menschen, die ihr Zuhause verlassen mussten oder ihr Glück in der Ferne suchten. Tagebücher und Briefe geben Einblick in Werte, Hoffnungen und Sorgen. Feines Porzellan und Möbelstücke zeugen von der Tisch- und Wohnkultur einer Familie. Geschäftsberichte und Zeitungsartikel erzählen von Geschäftsleuten, die mutige Entscheidungen trafen und damit Erfolge feierten oder scheiterten.",
+    "Selbst hinter einem kleinen Erinnerungsstück kann sich eine große Geschichte verbergen: Ein handgeschriebener Zettel stellt sich als vergessenes Familienrezept heraus, das bei der Auswanderung mitgenommen wurde.",
+    "Ich helfe Ihnen dabei, Geschichten wie diese aufzuspüren und zu erforschen."
+  ],
   "museums.title": "Museums",
   "museums.intro.h1": "Planning an exhibition?",
   "museums.intro.p": "We research and tell object histories, find unique exhibits for exhibitions, clarify usage and image rights, and develop innovative and audience-specific exhibition concepts.",

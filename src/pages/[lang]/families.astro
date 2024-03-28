@@ -1,6 +1,11 @@
 ---
+import ContentMedia from '../../components/ContentMedia.astro'
 import DefaultLayout from '../../layouts/DefaultLayout.astro'
 import { useTranslations, type Locale } from '../../utils/i18n'
+import microscope from '../../assets/img/microscope.webp'
+import teekanne from '../../assets/img/teekanne.webp'
+import exhibit from '../../assets/img/exhibit.webp'
+import Voices from '../../components/Voices'
 
 const t = useTranslations(Astro.currentLocale as Locale)
 
@@ -9,10 +14,63 @@ export { getStaticPaths } from '../../utils/i18n'
 
 <DefaultLayout title={t('families.title')}>
   <section class="my-64">
-    <div class="container grid grid-cols-1">
-      <h1 class="text-center text-6xl md:text-left lg:text-8xl">
+    <div class="flex flex-col items-center gap-20">
+      <h1 class="max-w-screen-sm text-center text-6xl lg:text-8xl">
         {t('families.intro.h1')}
       </h1>
+      {
+        (t('families.intro.p') as string[]).map((paragraph) => (
+          <p class="max-w-screen-sm text-center text-xl lg:text-2xl">{paragraph}</p>
+        ))
+      }
     </div>
   </section>
+  <section class="my-64">
+    <div class="container space-y-10">
+      <h3 class="text-center text-6xl">Mein Angebot</h3>
+
+      <p class="text-center text-xl font-normal dark:text-gray-400 lg:text-2xl">Forschen. Verstehen. Erzählen.</p>
+    </div>
+  </section>
+  <section class="my-64">
+    <ContentMedia imgSrc={microscope} reverseImg>
+      <h4>{'Forschen'}</h4>
+      <p class="text-xl">
+        {
+          'Wir forschen zu Familien und Biografien, zu Orten und Bauwerken ebenso wie zur Geschichte von Objekten. Dazu zählen Gemälde, Skulpturen, Porzellan und Silber. Der Fokus liegt auf der Geschichte Westeuropas des 19. und 20. Jahrhunderts.'
+        }
+      </p>
+      <p class="text-xl">
+        {
+          'Wir recherchieren für Sie europaweit in Archiven, Bibliotheken und Museen. Auf Wunsch suchen wir für Ihr Projekt international nach Schlüsseldokumenten und Bildern, Ton- und Filmaufnahmen sowie Ausstellungsobjekten. Sie profitieren von unseren Englisch- und Französischkenntnissen. Wir machen auch Faktenchecks für Texte, Dokumentationen und Filmen zu historischen Themen. Unsere Ergebnisse sind wissenschaftlich fundiert und nachprüfbar.'
+        }
+      </p>
+    </ContentMedia>
+  </section>
+  <section class="my-64">
+    <ContentMedia imgSrc={teekanne} reverseImg>
+      <h4>{'Verstehen'}</h4>
+      <p class="text-xl">
+        {
+          'Schriftstücke, Kunst- und Alltagsgegenstände sind nur aus ihrem historischen Kontext heraus verständlich: Aus welcher Manufaktur stammt das Teeservice? Was zeigt das Dekor? Ist der Vorbesitzer bekannt? Zu welchen Anlässen wurde es aufgedeckt? Was erfahren wir über das Selbstverständnis und die Wohnkultur des Vorbesitzers?'
+        }
+      </p>
+      <p class="text-xl">
+        {
+          'Wir helfen Ihnen, die Geschichte von Erinnerungsstücken und Sammlungsobjekten nachzuzeichnen und ihre Bedeutung zu entschlüsseln. Wir entziffern alte Handschriften und datiere Fotografien. Schlüsseldokumente wie Briefe und Tagebücher ordnen wir in ihren historischen Kontext ein. Unsere Ergebnisse bereiten wir nachvollziehbar und verständlich auf.'
+        }
+      </p>
+    </ContentMedia>
+  </section>
+  <section class="my-64">
+    <ContentMedia imgSrc={exhibit} reverseImg>
+      <h4>{'Erzählen'}</h4>
+      <p class="text-xl">
+        {
+          'Wie wir Geschichte erzählen, entscheidet, wie sie erinnert wird. Wir konzipieren Ausstellungen und digitale Medien, schreiben Aufsätze für Ausstellungskataloge und entwickeln begleitendes Unterrichtsmaterial. Sensible Themen und komplexe historische Zusammenhänge vermitteln wir einfach und klar. Wir entwickeln für Sie innovative Inhalte und zielgruppengerechte Formate. Gute Wissenskommunikation liegt uns am Herzen. Dabei setzen wir auf fundiertes Wissen und Methoden wie Storytelling.'
+        }
+      </p>
+    </ContentMedia>
+  </section>
+  <Voices client:only="react" />
 </DefaultLayout>
