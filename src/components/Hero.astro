@@ -1,7 +1,8 @@
 ---
-import { type Locale, useTranslations } from '../utils/i18n'
+import { type Locale, useTranslations, getCurrentLocalizedPath } from '../utils/i18n'
 import anka from '../assets/img/anka-rtl.webp'
 import { Image } from 'astro:assets'
+import { getRelativeLocaleUrl } from 'astro:i18n'
 
 const t = useTranslations(Astro.currentLocale as Locale)
 ---
@@ -17,10 +18,7 @@ const t = useTranslations(Astro.currentLocale as Locale)
           {t('home.intro')}
         </p>
         <div class="flex flex-col gap-3 min-[500px]:flex-row">
-          <a
-            class="button color-primary"
-            href="https://github.com/markteekman/accessible-astro-starter/blob/main/README.md"
-          >
+          <a class="button color-primary" href={getRelativeLocaleUrl(Astro.currentLocale ?? 'de', '/team')}>
             {t('home.more')}
           </a>
         </div>
