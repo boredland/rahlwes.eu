@@ -5,6 +5,7 @@ import { useTranslations, type Locale } from '../../utils/i18n'
 import microscope from '../../assets/img/microscope.webp'
 import teekanne from '../../assets/img/teekanne.webp'
 import exhibit from '../../assets/img/exhibit.webp'
+import Voices from '../../components/Voices'
 
 const t = useTranslations(Astro.currentLocale as Locale)
 
@@ -69,4 +70,5 @@ export { getStaticPaths } from '../../utils/i18n'
       </p>
     </ContentMedia>
   </section>
+  <Voices client:only="react" />
 </DefaultLayout>

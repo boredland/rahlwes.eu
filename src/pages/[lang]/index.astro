@@ -11,6 +11,7 @@ import buchHand from '../../assets/img/buch-hand.webp'
 import pair from '../../assets/img/pair-bubbles.png'
 import { Image } from 'astro:assets'
 import { Notification, Accordion, AccordionItem } from 'accessible-astro-components'
+import Voices from '../../components/Voices'
 
 export { getStaticPaths } from '../../utils/i18n'
 
@@ -77,7 +78,7 @@ redirectUrl.searchParams.set('sent', 'true')
       {t('home.texting.description')}
     </p>
   </ContentMedia>
-  {/** TODO: Testimonials, slick? */}
+  <Voices client:only="react" />
   <section id="conditions" class="my-64">
     <div class="container">
       <div class="grid grid-cols-1 gap-12 md:grid-cols-2">
