@@ -10,9 +10,6 @@ export default defineConfig({
   adapter: cloudflare({
     imageService: "compile",
   }),
-  build: {
-    format: 'file'
-  },
   trailingSlash: 'ignore',
   compressHTML: true,
   integrations: [
