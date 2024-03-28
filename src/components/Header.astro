@@ -16,6 +16,10 @@ const t = useTranslations(Astro.currentLocale as Locale)
     </li>
 
     <li class="menu-item">
+      <a href={getRelativeLocaleUrl(Astro.currentLocale ?? "de", "/museums")}>{t("museums.title")}</a>
+    </li>
+
+    <li class="menu-item">
       <a href={getRelativeLocaleUrl(Astro.currentLocale ?? "de", "/team")}>{t("team.title")}</a>
     </li>
 
