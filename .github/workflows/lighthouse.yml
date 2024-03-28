@@ -24,7 +24,7 @@ jobs:
           accountId: 'cd1e88db5a44de0f45317275cbcef879'
           project: 'rahlwes-eu'
           githubToken: ${{ github.token }}
-          commitHash: ${{ github.sha }}
+          commitHash: ${{ github.event.pull_request.head.sha || github.sha }}
       - name: Audit URLs using Lighthouse
         uses: treosh/lighthouse-ci-action@v11
         env:
