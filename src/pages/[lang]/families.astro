@@ -3,9 +3,12 @@ import ContentMedia from '../../components/ContentMedia.astro'
 import DefaultLayout from '../../layouts/DefaultLayout.astro'
 import { useTranslations, type Locale } from '../../utils/i18n'
 import microscope from '../../assets/img/microscope.webp'
-import teekanne from '../../assets/img/teekanne.webp'
-import exhibit from '../../assets/img/exhibit.webp'
-import Voices from '../../components/Voices'
+import portrait from '../../assets/img/portrait.webp'
+import family from '../../assets/img/family.webp'
+import fotokiste from '../../assets/img/fotokiste.webp'
+import hands from '../../assets/img/hands.webp'
+import teapot from '../../assets/img/teapot.webp'
+import Feature from '../../components/Feature.astro'
 
 const t = useTranslations(Astro.currentLocale as Locale)
 
@@ -26,51 +29,100 @@ export { getStaticPaths } from '../../utils/i18n'
     </div>
   </section>
   <section class="my-64">
-    <div class="container space-y-10">
-      <h3 class="text-center text-6xl">Mein Angebot</h3>
+    <ContentMedia imgSrc={microscope}>
+      <h4>{'Wer waren die Menschen, die uns vorausgingen?'}</h4>
+      <p class="text-xl">
+        {'Wie lebten und arbeiteten sie? Was war ihnen wichtig? Was taten sie, um ihre Situation zu verändern?'}
+      </p>
+      <p class="text-xl">
+        {
+          'Ich erforsche, was Sie bewegt. Ich recherchiere für Sie in Archiven,  übersetze alte Handschriften und bringe Ihre Familiengeschichte auf Papier. Gerne unterstütze ich Sie auch dabei, einen Nachlass zu sichten, zu ordnen und für die nächste Generation zu bewahren.'
+        }
+      </p>
+    </ContentMedia>
+  </section>
 
-      <p class="text-center text-xl font-normal dark:text-gray-400 lg:text-2xl">Forschen. Verstehen. Erzählen.</p>
+  <section class="my-64">
+    <div class="container grid grid-cols-1 gap-20">
+      <div class="flex flex-col items-center gap-20">
+        <h1 class="max-w-screen-sm text-center text-6xl lg:text-8xl">
+          {'Wer sind meine Vorfahren?'}
+        </h1>
+        <p class="max-w-screen-sm text-center text-xl lg:text-2xl">
+          {'Diese Tipps bringen Sie weiter.'}
+        </p>
+      </div>
+      <div class="grid grid-cols-1 gap-12 md:grid-cols-1 lg:grid-cols-3">
+        <Feature title={'So finden Sie Ihre Vorfahren in historischen Adressbüchern'}>
+          {
+            'Wer waren die Menschen, die uns vorausgingen? Wie lebten und arbeiteten sie? Was war ihnen wichtig? Das sind die Fragen, die uns bewegen, wenn wir uns mit Biografien beschäftigen. Eine gute Quelle für die Forschung sind historische Adressbücher.'
+          }
+        </Feature>
+        <Feature title={'Wie mit der Familienforschung beginnen?'}>
+          {
+            'Stehen Sie vor der Herausforderung, dass Sie gerne mehr über Ihre Vorfahren wissen würden, aber Ihnen liegen kaum Informationen vor? Wir zeigen Ihnen, wie Sie Ihrer Familiengeschichte auf die Spur kommen.'
+          }
+        </Feature>
+        <Feature title={'So recherchieren Sie zu Frankfurter Familien'}>
+          {
+            'In diesem Blogartikel erläutere ich, wie Sie zu Frankfurter Familien selbst und größtenteils kostenlos recherchieren können - über die Recherche in historischen Adressbüchern bis hin zu den zentralen Quellen in den Regional- und Landesarchiven.'
+          })
+        </Feature>
+      </div>
     </div>
   </section>
-  <section class="my-64">
-    <ContentMedia imgSrc={microscope} reverseImg>
-      <h4>{'Forschen'}</h4>
-      <p class="text-xl">
-        {
-          'Wir forschen zu Familien und Biografien, zu Orten und Bauwerken ebenso wie zur Geschichte von Objekten. Dazu zählen Gemälde, Skulpturen, Porzellan und Silber. Der Fokus liegt auf der Geschichte Westeuropas des 19. und 20. Jahrhunderts.'
-        }
-      </p>
-      <p class="text-xl">
-        {
-          'Wir recherchieren für Sie europaweit in Archiven, Bibliotheken und Museen. Auf Wunsch suchen wir für Ihr Projekt international nach Schlüsseldokumenten und Bildern, Ton- und Filmaufnahmen sowie Ausstellungsobjekten. Sie profitieren von unseren Englisch- und Französischkenntnissen. Wir machen auch Faktenchecks für Texte, Dokumentationen und Filmen zu historischen Themen. Unsere Ergebnisse sind wissenschaftlich fundiert und nachprüfbar.'
-        }
-      </p>
-    </ContentMedia>
-  </section>
-  <section class="my-64">
-    <ContentMedia imgSrc={teekanne} reverseImg>
-      <h4>{'Verstehen'}</h4>
-      <p class="text-xl">
-        {
-          'Schriftstücke, Kunst- und Alltagsgegenstände sind nur aus ihrem historischen Kontext heraus verständlich: Aus welcher Manufaktur stammt das Teeservice? Was zeigt das Dekor? Ist der Vorbesitzer bekannt? Zu welchen Anlässen wurde es aufgedeckt? Was erfahren wir über das Selbstverständnis und die Wohnkultur des Vorbesitzers?'
-        }
-      </p>
-      <p class="text-xl">
-        {
-          'Wir helfen Ihnen, die Geschichte von Erinnerungsstücken und Sammlungsobjekten nachzuzeichnen und ihre Bedeutung zu entschlüsseln. Wir entziffern alte Handschriften und datiere Fotografien. Schlüsseldokumente wie Briefe und Tagebücher ordnen wir in ihren historischen Kontext ein. Unsere Ergebnisse bereiten wir nachvollziehbar und verständlich auf.'
-        }
-      </p>
-    </ContentMedia>
-  </section>
-  <section class="my-64">
-    <ContentMedia imgSrc={exhibit} reverseImg>
-      <h4>{'Erzählen'}</h4>
-      <p class="text-xl">
-        {
-          'Wie wir Geschichte erzählen, entscheidet, wie sie erinnert wird. Wir konzipieren Ausstellungen und digitale Medien, schreiben Aufsätze für Ausstellungskataloge und entwickeln begleitendes Unterrichtsmaterial. Sensible Themen und komplexe historische Zusammenhänge vermitteln wir einfach und klar. Wir entwickeln für Sie innovative Inhalte und zielgruppengerechte Formate. Gute Wissenskommunikation liegt uns am Herzen. Dabei setzen wir auf fundiertes Wissen und Methoden wie Storytelling.'
-        }
-      </p>
-    </ContentMedia>
-  </section>
-  <Voices client:only="react" />
+
+  <ContentMedia imgSrc={portrait}>
+    <h2 class="text-center">{'Beratung'}</h2>
+    <p class="text-base">
+      {
+        'Sie wollen Ihre Familiengeschichte aufarbeiten, wissen aber nicht, wo Sie beginnen sollen und welche Archive für Sie relevant sind? Ich berate Sie gerne und erkläre Ihnen, wie Sie zu Ihren Vorfahren recherchieren können.'
+      }
+    </p>
+  </ContentMedia>
+
+  <ContentMedia imgSrc={family} reverseImg>
+    <h2 class="text-center">{'Familiengeschichte recherchieren und erzählen'}</h2>
+    <p class="text-base">
+      {
+        'Wir finden für Sie Schlüsseldokumente und Bilder zu Ihren Vorfahren. Wir bringen Ihre Familiengeschichte auf Papier und helfen Ihnen so, die Familienerinnerungen für kommende Generationen zu bewahren.'
+      }
+    </p>
+  </ContentMedia>
+
+  <ContentMedia imgSrc={fotokiste}>
+    <h2 class="text-center">{'Übersetzung alter Handschriften'}</h2>
+    <p class="text-base">
+      {
+        'Haben Sie alte Briefe und Dokumente aus dem Nachlass Ihrer Familie, die Sie nicht lesen können? Wir entziffern alte Handschriften und mache diese so wieder lesbar.'
+      }
+    </p>
+  </ContentMedia>
+
+  <ContentMedia imgSrc={hands} reverseImg>
+    <h2 class="text-center">{'Historische Führungen durch die Heimatorte ihrer Vorfahren'}</h2>
+    <p class="text-base">
+      {
+        'Möchten Sie mehr darüber wissen, wo Ihre Vorfahren gelebt haben? Sie möchten die Heimatstadt ihrer Familie nicht nur auf Fotos sehen, sondern sich selbst auf Spurensuche begeben? Gerne zeige ich Ihnen die Orte, die für Ihre Vorfahren Bedeutung hatten, und treffe Sie zu einer privaten Führung. Auf Wunsch erhalten Sie zusätzlich ein digitales Dossier, das die wichtigsten Stationen im Leben Ihrer Familie aufführt.'
+      }
+    </p>
+  </ContentMedia>
+
+  <ContentMedia imgSrc={teapot}>
+    <h2 class="text-center">{'Stammbaum'}</h2>
+    <p class="text-base">
+      {
+        'Vielleicht haben Sie bereits begonnen, einen Stammbaum Ihrer Familie zu erstellen, aber es gibt noch Lücken? Oder Sie sind sich unsicher, ob alle Angaben stimmen? Oder Sie stehen noch ganz am Anfang und wissen nicht, wie Sie beginnen sollen? Ich berate Sie gerne und unterstütze Sie dabei, Ihren Stammbaum zu erforschen.'
+      }
+    </p>
+  </ContentMedia>
+
+  <ContentMedia imgSrc={teapot} reverseImg>
+    <h2 class="text-center">{'Vermittlung von historischen Objekten an passende Museen und Institutionen'}</h2>
+    <p class="text-base">
+      {
+        'Haben Sie ein historisches Objekt, das Zuhause Platz wegnimmt? In einem Museum wäre ihr Familienerbstück besser aufgehoben? Oder gibt es Dokumente, die für Sie selbst nicht mehr wichtig, aber dennoch historisch wertvoll sind? Vor allem Museen und Archive freuen sich über neue Stücke, die die Sammlungen und Ausstellungen bereichern könnten. Ich stelle gerne einen passenden Kontakt her, damit Ihr Objekt ein neues Zuhause findet!'
+      }
+    </p>
+  </ContentMedia>
 </DefaultLayout>
