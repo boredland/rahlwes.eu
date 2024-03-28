@@ -9,7 +9,7 @@
     "start": "astro dev",
     "astro": "astro",
     "check": "astro check",
-    "build": "astro check && astro build",
+    "build": "astro check && astro build && cp _redirects ./dist/",
     "preview": "astro build && wrangler pages dev ./dist",
     "deploy": "astro build && wrangler pages deploy ./dist",
     "build-cf-types": "wrangler types"
