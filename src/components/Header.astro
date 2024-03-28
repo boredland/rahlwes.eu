@@ -2,39 +2,49 @@
 import Navigation from '../components/Navigation.astro'
 import { SkipLinks } from 'accessible-astro-components'
 import { getRelativeLocaleUrl } from 'astro:i18n'
-import { getCurrentLocalizedPath, useTranslations, type Locale } from "../utils/i18n"
+import { getCurrentLocalizedPath, useTranslations, type Locale } from '../utils/i18n'
 
 const t = useTranslations(Astro.currentLocale as Locale)
-
 ---
 
 <header>
+  <div class="fixed bottom-10 right-8 z-50">
+    <a
+      aria-label={t('floating.contact') as string}
+      href={`/${Astro.currentLocale}#contact`}
+      class="button rounded-full px-4 py-3 text-lg shadow-lg">&#128172;</a
+    >
+  </div>
   <SkipLinks />
   <Navigation>
     <li class="menu-item">
-      <a href={getRelativeLocaleUrl(Astro.currentLocale ?? "de")}>{"Home"}</a>
+      <a href={getRelativeLocaleUrl(Astro.currentLocale ?? 'de')}>{'Home'}</a>
     </li>
 
     <li class="menu-item">
-      <a href={getRelativeLocaleUrl(Astro.currentLocale ?? "de", "/museums")}>{t("museums.title")}</a>
+      <a href={getRelativeLocaleUrl(Astro.currentLocale ?? 'de', '/museums')}>{t('museums.title')}</a>
     </li>
 
     <li class="menu-item">
-      <a href={getRelativeLocaleUrl(Astro.currentLocale ?? "de", "/families")}>{t("families.title")}</a>
+      <a href={getRelativeLocaleUrl(Astro.currentLocale ?? 'de', '/families')}>{t('families.title')}</a>
     </li>
 
     <li class="menu-item">
-      <a href={getRelativeLocaleUrl(Astro.currentLocale ?? "de", "/team")}>{t("team.title")}</a>
+      <a href={getRelativeLocaleUrl(Astro.currentLocale ?? 'de', '/team')}>{t('team.title')}</a>
     </li>
 
     {
       Astro.currentLocale !== 'en' ? (
         <li>
-          <a aria-label={"switch language to english"} href={getCurrentLocalizedPath(Astro.url, 'en')}>en</a>
+          <a aria-label={'switch language to english'} href={getCurrentLocalizedPath(Astro.url, 'en')}>
+            en
+          </a>
         </li>
       ) : (
         <li>
-          <a aria-label="Sprache zu Deutsch ändern" href={getCurrentLocalizedPath(Astro.url, 'de')}>de</a>
+          <a aria-label="Sprache zu Deutsch ändern" href={getCurrentLocalizedPath(Astro.url, 'de')}>
+            de
+          </a>
         </li>
       )
     }
