@@ -20,8 +20,6 @@ const Voices: React.FC = () => {
       text="Über eine Haushaltsauflösung erhielt ich einige Porträtzeichnung und wollte diese an ein Museum verschenken. Ich selbst hatte verschiedene Kontakte angefragt, jedoch ohne Erfolg. Frau Rahlwes, in der regionalen Museumslandschaft bestens vernetzt, stellte den Kontakt zum Stadtmuseum Wiesbaden her, sodass jetzt die Zeichnungen den Platz haben, der ihnen gebührt."
       author="A. M."
     />,
-    <Quote text="I'm a quote" author="Author" />,
-    <Quote text="I'm a quote" author="Author" />,
   ]
   const maxIndex = quotes.length - 1
 
