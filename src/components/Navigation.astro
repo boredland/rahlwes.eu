@@ -48,10 +48,7 @@ import { getRelativeLocaleUrl } from 'astro:i18n'
         const menuItems = [...menu.querySelectorAll('a:not([rel*="external"])')] as HTMLAnchorElement[]
 
         menuItems.forEach((menuItem) => {
-          if (currenPathname.includes(menuItem.pathname.replaceAll('/', '')) && menuItem.textContent !== 'Home') {
-            menuItem.classList.add('is-active')
-            menuItem.setAttribute('aria-current', 'page')
-          } else if (menuItem.textContent === 'Home' && currenPathname === '/') {
+          if (currenPathname === menuItem.pathname) {
             menuItem.classList.add('is-active')
             menuItem.setAttribute('aria-current', 'page')
           }

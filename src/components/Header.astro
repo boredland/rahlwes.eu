@@ -28,14 +28,11 @@ const t = useTranslations(Astro.currentLocale as Locale)
     </li>
 
     {
-      Astro.currentLocale !== 'en' && (
+      Astro.currentLocale !== 'en' ? (
         <li>
           <a aria-label={"switch language to english"} href={getCurrentLocalizedPath(Astro.url, 'en')}>en</a>
         </li>
-      )
-    }
-    {
-      Astro.currentLocale !== 'de' && (
+      ) : (
         <li>
           <a aria-label="Sprache zu Deutsch ändern" href={getCurrentLocalizedPath(Astro.url, 'de')}>de</a>
         </li>
