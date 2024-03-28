@@ -9,10 +9,15 @@ export { getStaticPaths } from '../../utils/i18n'
 
 <DefaultLayout title={t('museums.title')}>
   <section class="my-64">
-    <div class="container">
+    <div class="container grid grid-cols-1">
       <h1 class="text-center text-6xl md:text-left lg:text-8xl">
         {t('museums.intro.h1')}
       </h1>
+      <div class="grid grid-cols-2">
+        <p>
+          {t('museums.intro.p')}
+        </p>
+      </div>
     </div>
   </section>
 </DefaultLayout>
