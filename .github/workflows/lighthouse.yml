@@ -39,8 +39,8 @@ jobs:
           urls: |
             ${{ steps.cf.outputs.url }}/en/
             ${{ steps.cf.outputs.url }}/de/
-            ${{ steps.cf.outputs.url }}/en/does-not-exist/
-            ${{ steps.cf.outputs.url }}/de/does-not-exist/
+            ${{ steps.cf.outputs.url }}/en/404/
+            ${{ steps.cf.outputs.url }}/de/404/
             ${{ steps.cf.outputs.url }}/en/team/
             ${{ steps.cf.outputs.url }}/de/team/
             ${{ steps.cf.outputs.url }}/en/museums/

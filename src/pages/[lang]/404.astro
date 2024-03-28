@@ -1,0 +1,23 @@
+---
+import DefaultLayout from '../../layouts/DefaultLayout.astro'
+import { useTranslations, type Locale } from "../../utils/i18n";
+
+const t = useTranslations(Astro.currentLocale as Locale)
+
+export { getStaticPaths } from '../../utils/i18n'
+---
+
+<DefaultLayout title="404">
+  <section class="my-12">
+    <div class="container">
+      <h1>{t('404.title')}</h1>
+    </div>
+  </section>
+  <section class="my-12">
+    <div class="space-content container">
+      <p class="text-2xl">{t('404.text')}</p>
+      <br />
+      <a class="button" href=`/${Astro.currentLocale}`>{t("404.button")}</a>
+    </div>
+  </section>
+</DefaultLayout>
