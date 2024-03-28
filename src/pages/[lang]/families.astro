@@ -1,0 +1,18 @@
+---
+import DefaultLayout from '../../layouts/DefaultLayout.astro'
+import { useTranslations, type Locale } from '../../utils/i18n'
+
+const t = useTranslations(Astro.currentLocale as Locale)
+
+export { getStaticPaths } from '../../utils/i18n'
+---
+
+<DefaultLayout title={t('families.title')}>
+  <section class="my-64">
+    <div class="container grid grid-cols-1">
+      <h1 class="text-center text-6xl md:text-left lg:text-8xl">
+        {t('families.intro.h1')}
+      </h1>
+    </div>
+  </section>
+</DefaultLayout>
