@@ -5,6 +5,10 @@ on:
       - main
   pull_request:
     types: [opened, synchronize]
+
+concurrency:
+  group: lighthouse-${{ github.head_ref || github.ref }}
+  cancel-in-progress: true
     
 jobs:
   lighthouse:
