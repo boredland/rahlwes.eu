@@ -25,48 +25,28 @@ export { getStaticPaths } from '../../utils/i18n'
   </section>
   <section class="my-64">
     <div class="container space-y-10">
-      <h3 class="text-center text-6xl">Mein Angebot</h3>
+      <h3 class="text-center text-6xl">{t('museums.offer')}</h3>
 
-      <p class="text-center text-xl font-normal dark:text-gray-400 lg:text-2xl">Forschen. Verstehen. Erzählen.</p>
+      <p class="text-center text-xl font-normal dark:text-gray-400 lg:text-2xl">{t('museums.tagline')}</p>
     </div>
   </section>
   <section class="my-64">
     <ContentMedia imgSrc={microscope} reverseImg>
-      <h4>{'Forschen'}</h4>
-      <p class="text-xl">
-        {
-          'Wir forschen zu Familien und Biografien, zu Orten und Bauwerken ebenso wie zur Geschichte von Objekten. Dazu zählen Gemälde, Skulpturen, Porzellan und Silber. Der Fokus liegt auf der Geschichte Westeuropas des 19. und 20. Jahrhunderts.'
-        }
-      </p>
-      <p class="text-xl">
-        {
-          'Wir recherchieren für Sie europaweit in Archiven, Bibliotheken und Museen. Auf Wunsch suchen wir für Ihr Projekt international nach Schlüsseldokumenten und Bildern, Ton- und Filmaufnahmen sowie Ausstellungsobjekten. Sie profitieren von unseren Englisch- und Französischkenntnissen. Wir machen auch Faktenchecks für Texte, Dokumentationen und Filmen zu historischen Themen. Unsere Ergebnisse sind wissenschaftlich fundiert und nachprüfbar.'
-        }
-      </p>
+      <h4>{t('museums.research.title')}</h4>
+      {(t('museums.research.p') as string[]).map((paragraph) => <p class="text-xl">{paragraph}</p>)}
     </ContentMedia>
   </section>
   <section class="my-64">
     <ContentMedia imgSrc={teekanne} reverseImg>
-      <h4>{'Verstehen'}</h4>
-      <p class="text-xl">
-        {
-          'Schriftstücke, Kunst- und Alltagsgegenstände sind nur aus ihrem historischen Kontext heraus verständlich: Aus welcher Manufaktur stammt das Teeservice? Was zeigt das Dekor? Ist der Vorbesitzer bekannt? Zu welchen Anlässen wurde es aufgedeckt? Was erfahren wir über das Selbstverständnis und die Wohnkultur des Vorbesitzers?'
-        }
-      </p>
-      <p class="text-xl">
-        {
-          'Wir helfen Ihnen, die Geschichte von Erinnerungsstücken und Sammlungsobjekten nachzuzeichnen und ihre Bedeutung zu entschlüsseln. Wir entziffern alte Handschriften und datiere Fotografien. Schlüsseldokumente wie Briefe und Tagebücher ordnen wir in ihren historischen Kontext ein. Unsere Ergebnisse bereiten wir nachvollziehbar und verständlich auf.'
-        }
-      </p>
+      <h4>{t('museums.insights.title')}</h4>
+      {(t('museums.insights.p') as string[]).map((paragraph) => <p class="text-xl">{paragraph}</p>)}
     </ContentMedia>
   </section>
   <section class="my-64">
     <ContentMedia imgSrc={exhibit} reverseImg>
-      <h4>{'Erzählen'}</h4>
+      <h4>{t('museums.tell.title')}</h4>
       <p class="text-xl">
-        {
-          'Wie wir Geschichte erzählen, entscheidet, wie sie erinnert wird. Wir konzipieren Ausstellungen und digitale Medien, schreiben Aufsätze für Ausstellungskataloge und entwickeln begleitendes Unterrichtsmaterial. Sensible Themen und komplexe historische Zusammenhänge vermitteln wir einfach und klar. Wir entwickeln für Sie innovative Inhalte und zielgruppengerechte Formate. Gute Wissenskommunikation liegt uns am Herzen. Dabei setzen wir auf fundiertes Wissen und Methoden wie Storytelling.'
-        }
+        {t('museums.tell.p')}
       </p>
     </ContentMedia>
   </section>

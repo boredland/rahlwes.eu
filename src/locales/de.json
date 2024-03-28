@@ -13,6 +13,20 @@
   "museums.title": "Museen",
   "museums.intro.h1": "Sie planen eine Ausstellung?",
   "museums.intro.p": "Wir erforschen und erzählen Objektgeschichte(n), finden einzigartige Exponate für Ausstellungen, klären Nutzungs- und Bildrechte und entwickeln innovative und zielgruppengerechte Ausstellungskonzepte.",
+  "museums.offer": "Mein Angebot für Museen",
+  "museums.tagline": "Forschen. Verstehen. Erzählen.",
+  "museums.research.title": "Recherche",
+  "museums.research.p": [
+    "Wir forschen zu Familien und Biografien, zu Orten und Bauwerken ebenso wie zur Geschichte von Objekten. Dazu zählen Gemälde, Skulpturen, Porzellan und Silber. Der Fokus liegt auf der Geschichte Westeuropas des 19. und 20. Jahrhunderts.",
+    "Wir recherchieren für Sie europaweit in Archiven, Bibliotheken und Museen. Auf Wunsch suchen wir für Ihr Projekt international nach Schlüsseldokumenten und Bildern, Ton- und Filmaufnahmen sowie Ausstellungsobjekten. Sie profitieren von unseren Englisch- und Französischkenntnissen. Wir machen auch Faktenchecks für Texte, Dokumentationen und Filmen zu historischen Themen. Unsere Ergebnisse sind wissenschaftlich fundiert und nachprüfbar."
+  ],
+  "museums.insights.title": "Verstehen",
+  "museums.insights.p": [
+    "Schriftstücke, Kunst- und Alltagsgegenstände sind nur aus ihrem historischen Kontext heraus verständlich: Aus welcher Manufaktur stammt das Teeservice? Was zeigt das Dekor? Ist der Vorbesitzer bekannt? Zu welchen Anlässen wurde es aufgedeckt? Was erfahren wir über das Selbstverständnis und die Wohnkultur des Vorbesitzers?",
+    "Wir helfen Ihnen, die Geschichte von Erinnerungsstücken und Sammlungsobjekten nachzuzeichnen und ihre Bedeutung zu entschlüsseln. Wir entziffern alte Handschriften und datiere Fotografien. Schlüsseldokumente wie Briefe und Tagebücher ordnen wir in ihren historischen Kontext ein. Unsere Ergebnisse bereiten wir nachvollziehbar und verständlich auf."
+  ],
+  "museums.tell.title": "Erzählen",
+  "museums.tell.p": "Wie wir Geschichte erzählen, entscheidet, wie sie erinnert wird. Wir konzipieren Ausstellungen und digitale Medien, schreiben Aufsätze für Ausstellungskataloge und entwickeln begleitendes Unterrichtsmaterial. Sensible Themen und komplexe historische Zusammenhänge vermitteln wir einfach und klar. Wir entwickeln für Sie innovative Inhalte und zielgruppengerechte Formate. Gute Wissenskommunikation liegt uns am Herzen. Dabei setzen wir auf fundiertes Wissen und Methoden wie Storytelling.",
   "team.title": "Team",
   "team.about": "Über mich",
   "team.speeches": "Vorträge",

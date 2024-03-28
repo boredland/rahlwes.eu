@@ -13,6 +13,20 @@
   "museums.title": "Museums",
   "museums.intro.h1": "Planning an exhibition?",
   "museums.intro.p": "We research and tell object histories, find unique exhibits for exhibitions, clarify usage and image rights, and develop innovative and audience-specific exhibition concepts.",
+  "museums.offer": "Our offer",
+  "museums.tagline": "Forschen. Verstehen. Erzählen.",
+  "museums.research.title": "Research",
+  "museums.research.p": [
+    "We conduct research on families and biographies, places and buildings, as well as the history of objects. This includes paintings, sculptures, porcelain, and silver. The focus is on the history of Western Europe in the 19th and 20th centuries.",
+    "We conduct research for you in archives, libraries and museums throughout Europe. On request, we can search internationally for key documents and images, sound and film recordings and exhibition objects for your project. You benefit from our knowledge of English and French. We also carry out fact checks for texts, documentaries and films on historical topics. Our results are scientifically sound and verifiable."
+  ],
+  "museums.insights.title": "Insights",
+  "museums.insights.p": [
+    "Written documents, works of art and everyday objects can only be understood in their historical context: Which manufactory does the tea service come from? What does the decoration show? Is the previous owner known? On what occasions was it uncovered? What do we learn about the previous owner's self-image and domestic culture?",
+    "We help you to trace the history of memorabilia and collection objects and decipher their meaning. We decipher old manuscripts and date photographs. We place key documents such as letters and diaries in their historical context. We present our findings in a comprehensible and understandable way."
+  ],
+  "museums.tell.title": "Telling",
+  "museums.tell.p": "How we tell history determines how it is remembered. We design exhibitions and digital media, write essays for exhibition catalogs, and develop accompanying educational materials. We convey sensitive topics and complex historical connections in a simple and clear manner. We develop innovative content and audience-specific formats for you. Good knowledge communication is important to us. We rely on solid knowledge and methods such as storytelling.",
   "team.title": "Team",
   "team.about": "About me",
   "team.speeches": "Speeches",
