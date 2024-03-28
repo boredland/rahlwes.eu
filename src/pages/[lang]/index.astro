@@ -22,6 +22,7 @@ redirectUrl.searchParams.set('sent', 'true')
 
 <DefaultLayout title={t('home.title')}>
   <Hero />
+
   <section class="my-64">
     <div class="container">
       <h2 class="mb-16 text-6xl">{t('home.offer')}</h2>
@@ -38,6 +39,7 @@ redirectUrl.searchParams.set('sent', 'true')
       </div>
     </div>
   </section>
+
   <section class="my-64">
     <div class="container grid grid-cols-1 gap-12">
       <h2 class="text-center">{t('home.collaboration.title')}</h2>
@@ -50,6 +52,7 @@ redirectUrl.searchParams.set('sent', 'true')
       </p>
     </div>
   </section>
+
   <ContentMedia imgSrc={lupe} reverseImg>
     <h2 class="text-center">{t('home.pre-research.title')}</h2>
     <p class="text-base">
@@ -59,18 +62,21 @@ redirectUrl.searchParams.set('sent', 'true')
       {t('home.pre-research.description.p2')}
     </p>
   </ContentMedia>
+
   <ContentMedia imgSrc={fotokiste} reverseImg>
     <h2>{t('home.research.title')}</h2>
     <p class="text-base">
       {t('home.research.description')}
     </p>
   </ContentMedia>
+
   <ContentMedia imgSrc={fotoHand} reverseImg>
     <h2>{t('home.evaluation.title')}</h2>
     <p class="text-base">
       {t('home.evaluation.description')}
     </p>
   </ContentMedia>
+
   <ContentMedia imgSrc={buchHand} reverseImg>
     <h2>{t('home.texting.title')}</h2>
 
@@ -78,7 +84,9 @@ redirectUrl.searchParams.set('sent', 'true')
       {t('home.texting.description')}
     </p>
   </ContentMedia>
+
   <Voices client:only="react" />
+
   <section id="conditions" class="my-64">
     <div class="container">
       <div class="grid grid-cols-1 gap-12 md:grid-cols-2">
@@ -137,6 +145,7 @@ redirectUrl.searchParams.set('sent', 'true')
       </div>
     </div>
   </section>
+
   <section id="contact">
     <div class="container">
       <div class="grid grid-cols-1 items-center justify-between justify-items-center gap-24 md:grid-cols-2">
