@@ -3,8 +3,8 @@ import Slider from 'slick-slider-react'
 
 const Quote: React.FC<{ text: string; author: string }> = ({ text, author }) => (
   <div className="grid w-screen grid-cols-1 content-center justify-center justify-items-center gap-5">
-    <p className="w-72 text-center text-lg italic">"{text}"</p>
-    <p className="w-72 text-center text-sm">{author}</p>
+    <p className="w-72 text-center text-lg italic lg:w-96">"{text}"</p>
+    <p className="w-72 text-center text-sm lg:w-96">{author}</p>
   </div>
 )
 
@@ -26,7 +26,7 @@ const Voices: React.FC = () => {
   return (
     <div className="grid grid-flow-col items-center">
       <button
-        className={`${index === 0 ? 'hidden' : ''} h-20 border-gray-400 hover:border-white`}
+        className={`${index === 0 ? 'hidden' : ''} h-20 border-dashed border-transparent font-bold hover:border-gray-400 dark:hover:border-white`}
         onClick={() => setIndex(index > 0 ? index - 1 : 0)}
       >
         &lt;
@@ -35,7 +35,7 @@ const Voices: React.FC = () => {
         {quotes}
       </Slider>
       <button
-        className={`${index === maxIndex ? 'hidden' : ''} h-20 border-gray-400 hover:border-white`}
+        className={`${index === maxIndex ? 'hidden' : ''} h-20 border-dashed border-transparent font-bold hover:border-gray-400  dark:hover:border-white`}
         onClick={() => setIndex(index < maxIndex ? index + 1 : maxIndex)}
       >
         &gt;
