@@ -134,7 +134,7 @@ export { getStaticPaths } from '../../utils/i18n'
   <section id="book">
     <div class="container">
       <div class="grid grid-cols-1 items-center justify-between justify-items-center gap-24">
-        <div class="space-content flex w-full flex-col justify-center lg:w-5/12">
+        <div class="space-content flex w-full flex-col justify-center md:w-7/12 lg:w-5/12">
           <h2 class="mb-16 text-6xl">{t('families.book.title')}</h2>
           <p class="text-xl">
             {t('families.book.subtitle')}
@@ -224,21 +224,6 @@ export { getStaticPaths } from '../../utils/i18n'
                     />
                     <label class="text-s block" for="grid-privacy">
                       {t('home.contact.privacy')}
-                    </label>
-                  </div>
-                </div>
-
-                <div class="-mx-3 mb-6 flex flex-wrap">
-                  <div class="grid w-full grid-flow-col items-center px-3">
-                    <input
-                      type="checkbox"
-                      value="Möchte einen Gutschein kaufen"
-                      id="grid-coupon"
-                      name="$Gutschein"
-                      class="h-4 w-20"
-                    />
-                    <label class="text-s block" for="grid-coupon">
-                      {t('home.contact.coupon')}
                     </label>
                   </div>
                 </div>
