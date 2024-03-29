@@ -10,14 +10,13 @@ import hands from '../../assets/img/hands.webp'
 import teapot from '../../assets/img/teapot.webp'
 import Feature from '../../components/Feature.astro'
 import { Notification } from 'accessible-astro-components'
-import { Image } from 'astro:assets'
-import pair from '../../assets/img/pair-bubbles.png'
 
 const t = useTranslations(Astro.currentLocale as Locale)
 const redirectUrl = new URL(Astro.url.toString())
 redirectUrl.searchParams.set('sent', 'true')
 
 export { getStaticPaths } from '../../utils/i18n'
+export const prerender = true
 ---
 
 <DefaultLayout title={t('families.title')}>
@@ -142,6 +141,7 @@ export { getStaticPaths } from '../../utils/i18n'
           <p class="text-base">
             {t('families.book.intro')}
           </p>
+          <br />
           {
             Astro.url.searchParams.get('sent') === 'true' ? (
               <Notification type="success" role="status" aria-live="polite">

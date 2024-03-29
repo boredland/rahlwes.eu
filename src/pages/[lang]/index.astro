@@ -13,11 +13,12 @@ import { Image } from 'astro:assets'
 import { Notification, Accordion, AccordionItem } from 'accessible-astro-components'
 import Voices from '../../components/Voices'
 
-export { getStaticPaths } from '../../utils/i18n'
-
 const t = useTranslations(Astro.currentLocale as Locale)
 const redirectUrl = new URL(Astro.url.toString())
 redirectUrl.searchParams.set('sent', 'true')
+
+export { getStaticPaths } from '../../utils/i18n'
+export const prerender = true
 ---
 
 <DefaultLayout title={t('home.title')}>

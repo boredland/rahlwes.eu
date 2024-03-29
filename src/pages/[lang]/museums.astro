@@ -10,6 +10,7 @@ import Voices from '../../components/Voices'
 const t = useTranslations(Astro.currentLocale as Locale)
 
 export { getStaticPaths } from '../../utils/i18n'
+export const prerender = true
 ---
 
 <DefaultLayout title={t('museums.title')}>
