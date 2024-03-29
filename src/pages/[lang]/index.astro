@@ -152,130 +152,124 @@ export const prerender = true
       <div class="grid grid-cols-1 items-center justify-between justify-items-center gap-24 md:grid-cols-2">
         <div class="space-content flex w-full flex-col justify-center lg:w-5/12">
           <h2 class="mb-16 text-6xl">{t('home.contact.title')}</h2>
-          {
-            Astro.url.searchParams.get('sent') === 'true' ? (
-              <Notification type="success" role="status" aria-live="polite">
-                <p>{t('home.contact.success')}</p>
-              </Notification>
-            ) : (
-              <form class="w-full max-w-lg" id="contact" action="https://api.staticforms.xyz/submit" method="post">
-                <input type="hidden" name="accessKey" value="9ff3d376-ed87-491b-ab19-de84aebde1be" />
-                <input type="text" name="honeypot" style="display: none;" />
-                <input type="text" name="replyTo" value="@" style="display: none;" />
-                <input type="hidden" name="subject" value="Nachricht über das Kontaktformular" />
+          <Notification type="success" role="status" aria-live="polite">
+            <p>{t('home.contact.success')}</p>
+          </Notification>
+          <form class="w-full max-w-lg" id="contact" action="https://api.staticforms.xyz/submit" method="post">
+            <input type="hidden" name="accessKey" value="9ff3d376-ed87-491b-ab19-de84aebde1be" />
+            <input type="text" name="honeypot" style="display: none;" />
+            <input type="text" name="replyTo" value="@" style="display: none;" />
+            <input type="hidden" name="subject" value="Nachricht über das Kontaktformular" />
 
-                <div class="-mx-3 mb-6 flex flex-wrap">
-                  <div class="mb-6 w-full px-3 md:mb-0 md:w-1/2">
-                    <label class="mb-2 block text-xs font-bold uppercase tracking-wide" for="grid-first-name">
-                      {t('home.contact.firstName')}
-                    </label>
-                    <input
-                      class="mb-3 block w-full appearance-none rounded border border-red-500 px-4 py-3 leading-tight focus:bg-white focus:outline-none"
-                      id="grid-first-name"
-                      type="text"
-                      placeholder="Jane"
-                      name="$first_name"
-                      required
-                    />
-                  </div>
-                  <div class="w-full px-3 md:w-1/2">
-                    <label class="mb-2 block text-xs font-bold uppercase tracking-wide" for="grid-last-name">
-                      {t('home.contact.lastName')}
-                    </label>
-                    <input
-                      class="block w-full appearance-none rounded border px-4 py-3 leading-tight focus:bg-white focus:outline-none"
-                      id="grid-last-name"
-                      type="text"
-                      placeholder="Doe"
-                      name="name"
-                      required
-                    />
-                  </div>
-                </div>
-                <div class="-mx-3 mb-6 flex flex-wrap">
-                  <div class="w-full px-3">
-                    <label class="mb-2 block text-xs font-bold uppercase tracking-wide" for="grid-email">
-                      {t('home.contact.email')}
-                    </label>
-                    <input
-                      class="mb-3 block w-full appearance-none rounded border px-4 py-3 leading-tight focus:bg-white focus:outline-none"
-                      id="grid-email"
-                      type="email"
-                      name="email"
-                      required
-                    />
-                  </div>
-                </div>
-                <div class="-mx-3 mb-6 flex flex-wrap">
-                  <div class="w-full px-3">
-                    <label class="mb-2 block text-xs font-bold uppercase tracking-wide" for="grid-message">
-                      {t('home.contact.message')}
-                    </label>
-                    <textarea
-                      form="contact"
-                      rows={8}
-                      class="mb-3 block w-full appearance-none rounded border px-4 py-3 leading-tight focus:bg-white focus:outline-none"
-                      id="grid-message"
-                      name="message"
-                      required
-                    />
-                  </div>
-                </div>
+            <div class="-mx-3 mb-6 flex flex-wrap">
+              <div class="mb-6 w-full px-3 md:mb-0 md:w-1/2">
+                <label class="mb-2 block text-xs font-bold uppercase tracking-wide" for="grid-first-name">
+                  {t('home.contact.firstName')}
+                </label>
+                <input
+                  class="mb-3 block w-full appearance-none rounded border border-red-500 px-4 py-3 leading-tight focus:bg-white focus:outline-none"
+                  id="grid-first-name"
+                  type="text"
+                  placeholder="Jane"
+                  name="$first_name"
+                  required
+                />
+              </div>
+              <div class="w-full px-3 md:w-1/2">
+                <label class="mb-2 block text-xs font-bold uppercase tracking-wide" for="grid-last-name">
+                  {t('home.contact.lastName')}
+                </label>
+                <input
+                  class="block w-full appearance-none rounded border px-4 py-3 leading-tight focus:bg-white focus:outline-none"
+                  id="grid-last-name"
+                  type="text"
+                  placeholder="Doe"
+                  name="name"
+                  required
+                />
+              </div>
+            </div>
+            <div class="-mx-3 mb-6 flex flex-wrap">
+              <div class="w-full px-3">
+                <label class="mb-2 block text-xs font-bold uppercase tracking-wide" for="grid-email">
+                  {t('home.contact.email')}
+                </label>
+                <input
+                  class="mb-3 block w-full appearance-none rounded border px-4 py-3 leading-tight focus:bg-white focus:outline-none"
+                  id="grid-email"
+                  type="email"
+                  name="email"
+                  required
+                />
+              </div>
+            </div>
+            <div class="-mx-3 mb-6 flex flex-wrap">
+              <div class="w-full px-3">
+                <label class="mb-2 block text-xs font-bold uppercase tracking-wide" for="grid-message">
+                  {t('home.contact.message')}
+                </label>
+                <textarea
+                  form="contact"
+                  rows={8}
+                  class="mb-3 block w-full appearance-none rounded border px-4 py-3 leading-tight focus:bg-white focus:outline-none"
+                  id="grid-message"
+                  name="message"
+                  required></textarea>
+              </div>
+            </div>
 
-                <div class="-mx-3 mb-6 flex flex-wrap">
-                  <div class="grid w-full grid-flow-col items-center px-3">
-                    <input
-                      type="checkbox"
-                      value="Hat Bedingungen akzeptiert."
-                      id="grid-privacy"
-                      name="$privacy"
-                      required
-                      class="h-4 w-20"
-                    />
-                    <label class="text-s block" for="grid-privacy">
-                      {t('home.contact.privacy')}
-                    </label>
-                  </div>
-                </div>
+            <div class="-mx-3 mb-6 flex flex-wrap">
+              <div class="grid w-full grid-flow-col items-center px-3">
+                <input
+                  type="checkbox"
+                  value="Hat Bedingungen akzeptiert."
+                  id="grid-privacy"
+                  name="$privacy"
+                  required
+                  class="h-4 w-20"
+                />
+                <label class="text-s block" for="grid-privacy">
+                  {t('home.contact.privacy')}
+                </label>
+              </div>
+            </div>
 
-                <div class="-mx-3 mb-6 flex flex-wrap">
-                  <div class="grid w-full grid-flow-col items-center px-3">
-                    <input
-                      type="checkbox"
-                      value="Möchte einen Gutschein kaufen"
-                      id="grid-coupon"
-                      name="$Gutschein"
-                      class="h-4 w-20"
-                    />
-                    <label class="text-s block" for="grid-coupon">
-                      {t('home.contact.coupon')}
-                    </label>
-                  </div>
-                </div>
+            <div class="-mx-3 mb-6 flex flex-wrap">
+              <div class="grid w-full grid-flow-col items-center px-3">
+                <input
+                  type="checkbox"
+                  value="Möchte einen Gutschein kaufen"
+                  id="grid-coupon"
+                  name="$Gutschein"
+                  class="h-4 w-20"
+                />
+                <label class="text-s block" for="grid-coupon">
+                  {t('home.contact.coupon')}
+                </label>
+              </div>
+            </div>
 
-                <div class="-mx-3 mb-6 flex flex-wrap">
-                  <div class="grid w-full grid-flow-col items-center px-3">
-                    <input
-                      type="checkbox"
-                      value="Möchte ein Kennenlerngespräch"
-                      id="grid-get-to-know"
-                      name="$Kennenlerngespräch"
-                      class="h-4 w-20"
-                    />
-                    <label class="text-s block" for="grid-get-to-know">
-                      {t('home.contact.get-to-know')}
-                    </label>
-                  </div>
-                </div>
+            <div class="-mx-3 mb-6 flex flex-wrap">
+              <div class="grid w-full grid-flow-col items-center px-3">
+                <input
+                  type="checkbox"
+                  value="Möchte ein Kennenlerngespräch"
+                  id="grid-get-to-know"
+                  name="$Kennenlerngespräch"
+                  class="h-4 w-20"
+                />
+                <label class="text-s block" for="grid-get-to-know">
+                  {t('home.contact.get-to-know')}
+                </label>
+              </div>
+            </div>
 
-                <input type="hidden" name="redirectTo" value={`${redirectUrl.toString()}#contact`} />
+            <input type="hidden" name="redirectTo" value={`${redirectUrl.toString()}#contact`} />
 
-                <button class="button" value="Submit" type="submit">
-                  {t('home.contact.submit')}
-                </button>
-              </form>
-            )
-          }
+            <button class="button" value="Submit" type="submit">
+              {t('home.contact.submit')}
+            </button>
+          </form>
         </div>
         <Image src={pair} alt={''} class="w-64 rounded-lg md:w-fit" />
       </div>
@@ -283,3 +277,15 @@ export const prerender = true
   </section>
   {/** Optional TODO: Add cal.com */}
 </DefaultLayout>
+
+<script>
+  const forms = document.querySelectorAll('form')
+  const notification = document.querySelector('div.notification') as HTMLElement
+  notification.style.display = 'none'
+
+  const isSent = new URLSearchParams(window.location.search).get('sent') === 'true'
+  if (isSent) {
+    forms.forEach((form) => (form.style.display = 'none'))
+    notification.style.display = 'block'
+  }
+</script>

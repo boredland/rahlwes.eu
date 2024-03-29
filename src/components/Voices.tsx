@@ -15,10 +15,12 @@ const Voices: React.FC = () => {
     <Quote
       text="Ann-Kathrin Rahlwes is an absolute professional, extremely creative, and cultivates a very pleasant communication style. She's fun and interesting to work with."
       author="Judith Rosenthal"
+      key="judith"
     />,
     <Quote
       text="Über eine Haushaltsauflösung erhielt ich einige Porträtzeichnung und wollte diese an ein Museum verschenken. Ich selbst hatte verschiedene Kontakte angefragt, jedoch ohne Erfolg. Frau Rahlwes, in der regionalen Museumslandschaft bestens vernetzt, stellte den Kontakt zum Stadtmuseum Wiesbaden her, sodass jetzt die Zeichnungen den Platz haben, der ihnen gebührt."
       author="A. M."
+      key="a.m."
     />,
   ]
   const maxIndex = quotes.length - 1
