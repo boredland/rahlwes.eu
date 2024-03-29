@@ -1,7 +1,9 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:recommended",
-    "helpers:pinGitHubActionDigests"
-  ]
+  "extends": ["config:base", "helpers:pinGitHubActionDigests", "group:monorepos", "group:recommended"],
+  "lockFileMaintenance": {
+    "enabled": true
+  },
+  "prConcurrentLimit": 1,
+  "schedule": ["every weekday"]
 }
