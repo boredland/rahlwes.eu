@@ -142,9 +142,11 @@ export const prerender = true
             {t('families.book.intro')}
           </p>
           <br />
-          <Notification type="success" role="status" aria-live="polite">
-            <p>{t('families.book.success')}</p>
-          </Notification>
+          <div id="success" class="hidden">
+            <Notification type="success" role="status" aria-live="polite">
+              <p>{t('families.book.success')}</p>
+            </Notification>
+          </div>
           <form class="w-full" id="contact" action="https://api.staticforms.xyz/submit" method="post">
             <input type="hidden" name="accessKey" value="9ff3d376-ed87-491b-ab19-de84aebde1be" />
             <input type="text" name="honeypot" style="display: none;" />
@@ -253,8 +255,7 @@ export const prerender = true
 
 <script>
   const forms = document.querySelectorAll('form')
-  const notification = document.querySelector('div.notification') as HTMLElement
-  notification.style.display = 'none'
+  const notification = document.querySelector('#success') as HTMLElement
 
   const isSent = new URLSearchParams(window.location.search).get('sent') === 'true'
   if (isSent) {
