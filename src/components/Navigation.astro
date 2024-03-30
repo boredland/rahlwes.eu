@@ -2,14 +2,21 @@
 import ResponsiveToggle from './ResponsiveToggle.astro'
 import { DarkMode } from 'accessible-astro-components'
 import { Image } from 'astro:assets'
-import logo from "../assets/logo.svg"
+import logo from '../assets/logo.svg'
 import { getRelativeLocaleUrl } from 'astro:i18n'
 ---
 
 <div id="main-navigation" class="is-desktop py-8">
   <div class="container">
-    <a href={getRelativeLocaleUrl(Astro.currentLocale ?? "de")} class="flex items-center gap-6 !no-underline">
-      <Image src={logo} alt="Logo: Rahlwes - Historical Research Service" width="30" height="30" format="svg" loading={"lazy"} />
+    <a href={getRelativeLocaleUrl(Astro.currentLocale ?? 'de')} class="flex items-center gap-6 !no-underline">
+      <Image
+        src={logo}
+        alt="Logo: Rahlwes - Historical Research Service"
+        width="30"
+        height="30"
+        format="svg"
+        loading={'lazy'}
+      />
 
       <span class="font-bold max-sm:hidden">Rahlwes. Historical research.</span>
     </a>
@@ -35,7 +42,7 @@ import { getRelativeLocaleUrl } from 'astro:i18n'
     // variables
     const mainNav = document.querySelector('#main-navigation')
 
-    if (!mainNav) return;
+    if (!mainNav) return
 
     const mainMenu = mainNav.querySelector('ul')
 
@@ -56,31 +63,13 @@ import { getRelativeLocaleUrl } from 'astro:i18n'
       })
     }
 
-    const checkMenuSize = () => {
-      const mainNavWidth = mainNav.getBoundingClientRect().width
-      const desktopMenuWidth = document.querySelector('.desktop-menu')?.getBoundingClientRect().width
-
-      if (!desktopMenuWidth) return;
-
-      const logoWidthBuffer = 300
-      const totalMenuWidth = Math.round(desktopMenuWidth) + logoWidthBuffer
-
-      if (totalMenuWidth >= mainNavWidth) {
-        mainNav.classList.remove('is-desktop')
-        mainNav.classList.add('is-mobile')
-      } else if (totalMenuWidth <= mainNavWidth) {
-        mainNav.classList.add('is-desktop')
-        mainNav.classList.remove('is-mobile')
-      }
-    }
-
     // execution
     mainMenu &&
       mainMenu.addEventListener('keydown', (event) => {
         const element = event.target as Element
         const currentMenuItem = element.closest('li')
 
-        if (!currentMenuItem) return;
+        if (!currentMenuItem) return
 
         const menuItems = [...mainMenu.querySelectorAll('.menu-item')]
         const currentIndex = menuItems.findIndex((item) => item === currentMenuItem)
@@ -114,9 +103,6 @@ import { getRelativeLocaleUrl } from 'astro:i18n'
       })
 
     setActiveMenuItem()
-    checkMenuSize()
-
-    window.addEventListener('resize', checkMenuSize)
   })
 </script>
 
@@ -131,22 +117,20 @@ import { getRelativeLocaleUrl } from 'astro:i18n'
       flex-wrap: wrap;
     }
 
-    &.is-desktop {
-      .desktop-menu {
-        visibility: visible;
-        position: static;
-      }
-
-      .mobile-menu {
-        display: none;
-      }
-
-      .darkmode-toggle {
-        margin-top: -6px;
-      }
+    .desktop-menu {
+      visibility: visible;
+      position: static;
     }
 
-    &.is-mobile {
+    .mobile-menu {
+      display: none;
+    }
+
+    .darkmode-toggle {
+      margin-top: -6px;
+    }
+
+    @media screen and (max-width: 791px) {
       flex-direction: column;
 
       .mobile-menu {
@@ -166,6 +150,10 @@ import { getRelativeLocaleUrl } from 'astro:i18n'
 
       .responsive-toggle {
         display: block;
+      }
+
+      .darkmode-toggle {
+        margin-top: 0;
       }
     }
 
@@ -309,8 +297,7 @@ import { getRelativeLocaleUrl } from 'astro:i18n'
 
     &:focus {
       @include outline;
-
-      &:not(:focus-visible) {
+      ccccccjfnttjfjeebfcibkujkhettlbvrdvficjrckfl &:not(:focus-visible) {
         outline: none;
         box-shadow: none;
       }
