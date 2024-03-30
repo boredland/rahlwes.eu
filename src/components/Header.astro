@@ -1,6 +1,6 @@
 ---
 import Navigation from '../components/Navigation.astro'
-import { SkipLinks } from 'accessible-astro-components'
+import { Modal, SkipLinks } from 'accessible-astro-components'
 import { getRelativeLocaleUrl } from 'astro:i18n'
 import { getCurrentLocalizedPath, useTranslations, type Locale } from '../utils/i18n'
 
@@ -8,6 +8,29 @@ const t = useTranslations(Astro.currentLocale as Locale)
 ---
 
 <header>
+  <button id="newsletter-trigger" class="hidden">Modal 2</button>
+  <Modal triggerId="newsletter-trigger" closeText={t('newsletter.cancel')}>
+    <div class="lg:w-96">
+      <form method="post" action="https://lists.rahlwes.eu/subscription/form" class="grid grid-cols-1 gap-10">
+        <h2>{t('newsletter.title')}</h2>
+        <p>{t('newsletter.description')}</p>
+        <input type="hidden" name="nonce" />
+        <input id="bd8da" type="hidden" name="l" checked value="bd8da52f-8b88-4da7-8025-fb3efc516165" />
+        <div class="grid grid-cols-2 gap-5">
+          <input
+            class="block min-w-48 max-w-60 appearance-none rounded border px-4 py-2 leading-tight focus:bg-white focus:outline-none"
+            id="grid-email"
+            type="email"
+            name="email"
+            placeholder="jane.doe@email.com"
+            required
+          />
+          <button type="submit" class="button max-w-32">{t('newsletter.subscribe')}</button>
+        </div>
+      </form>
+    </div>
+  </Modal>
+
   <div class="fixed bottom-10 right-8 z-50">
     <a
       aria-label={t('floating.contact') as string}
@@ -76,3 +99,16 @@ const t = useTranslations(Astro.currentLocale as Locale)
     }
   }
 </style>
+
+<script>
+  const delay = 10000
+  const newsletterAskTimestamp = localStorage.getItem('newsletterAskTimestamp')
+  const sevenDaysEarlierTimestamp = new Date().getTime() - 7 * 24 * 60 * 60 * 1000
+  if (!newsletterAskTimestamp || Number.parseInt(newsletterAskTimestamp) < sevenDaysEarlierTimestamp) {
+    setTimeout(() => {
+      const newsletterTrigger = document.querySelector('#newsletter-trigger') as HTMLButtonElement
+      newsletterTrigger.click()
+      localStorage.setItem('newsletterAskTimestamp', new Date().getTime().toString())
+    }, delay)
+  }
+</script>

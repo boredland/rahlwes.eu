@@ -1,4 +1,8 @@
 {
+  "newsletter.subscribe": "Subscribe",
+  "newsletter.title": "Join the conversation with us!",
+  "newsletter.description": "Sign up for our newsletter and receive regular insights into our work and exciting input on historical topics.",
+  "newsletter.cancel": "Cancel",
   "floating.contact": "Get in touch!",
   "404.title": "Not found",
   "404.text": "Page not found - we're working on it!",
