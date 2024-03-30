@@ -4,6 +4,7 @@ import { Modal, SkipLinks } from 'accessible-astro-components'
 import { getRelativeLocaleUrl } from 'astro:i18n'
 import { getCurrentLocalizedPath, useTranslations, type Locale } from '../utils/i18n'
 
+const url = Astro.url
 const t = useTranslations(Astro.currentLocale as Locale)
 ---
 
@@ -11,7 +12,11 @@ const t = useTranslations(Astro.currentLocale as Locale)
   <button id="newsletter-trigger" class="hidden">Modal 2</button>
   <Modal triggerId="newsletter-trigger" closeText={t('newsletter.cancel')}>
     <div class="lg:w-96">
-      <form method="post" action="https://lists.rahlwes.eu/subscription/form" class="grid grid-cols-1 gap-10">
+      <form
+        method="post"
+        action={`https://lists.rahlwes.eu/subscription/form?redirect=${url}`}
+        class="grid grid-cols-1 gap-10"
+      >
         <h2>{t('newsletter.title')}</h2>
         <p>{t('newsletter.description')}</p>
         <input type="hidden" name="nonce" />
