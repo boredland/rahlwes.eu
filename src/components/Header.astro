@@ -14,7 +14,7 @@ const t = useTranslations(Astro.currentLocale as Locale)
     <div class="lg:w-96">
       <form
         method="post"
-        action={`https://lists.rahlwes.eu/subscription/form?redirect=${url}`}
+        action={`https://lists.rahlwes.eu/subscription/form?redirect=${url}?newsletter=success`}
         class="grid grid-cols-1 gap-10"
       >
         <h2>{t('newsletter.title')}</h2>
@@ -107,13 +107,20 @@ const t = useTranslations(Astro.currentLocale as Locale)
 
 <script>
   const delay = 10000
+  const daysUntilNewsletterAsk = 7
   const newsletterAskTimestamp = localStorage.getItem('newsletterAskTimestamp')
-  const sevenDaysEarlierTimestamp = new Date().getTime() - 7 * 24 * 60 * 60 * 1000
+  const sevenDaysEarlierTimestamp = new Date().getTime() - daysUntilNewsletterAsk * 24 * 60 * 60 * 1000
   if (!newsletterAskTimestamp || Number.parseInt(newsletterAskTimestamp) < sevenDaysEarlierTimestamp) {
     setTimeout(() => {
       const newsletterTrigger = document.querySelector('#newsletter-trigger') as HTMLButtonElement
       newsletterTrigger.click()
       localStorage.setItem('newsletterAskTimestamp', new Date().getTime().toString())
     }, delay)
+  }
+</script>
+
+<script>
+  if (new URLSearchParams(window.location.search).get('newsletter') === 'success') {
+    localStorage.setItem('newsletterAskTimestamp', Infinity.toString())
   }
 </script>
