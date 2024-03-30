@@ -1,4 +1,9 @@
 ---
+import { getRelativeLocaleUrl } from 'astro:i18n'
+import { useTranslations, type Locale } from '../utils/i18n'
+
+const t = useTranslations(Astro.currentLocale as Locale)
+
 const currentYear = new Date().getFullYear()
 ---
 
@@ -8,7 +13,7 @@ const currentYear = new Date().getFullYear()
       <p class="text-center text-base">
         &copy; {currentYear} - Ann-Kathrin Rahlwes | Historikerin | <a href="mailto:letstalk@rahlwes.eu"
           >letstalk@rahlwes.eu</a
-        >.
+        > | <a href={getRelativeLocaleUrl(Astro.currentLocale ?? 'de', '/imprint')}>{t('imprint.title')}</a>.
       </p>
     </div>
   </section>
