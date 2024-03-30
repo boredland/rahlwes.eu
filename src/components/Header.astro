@@ -9,7 +9,6 @@ const t = useTranslations(Astro.currentLocale as Locale)
 ---
 
 <header>
-  <button id="newsletter-trigger" class="hidden">Modal 2</button>
   <Modal triggerId="newsletter-trigger" closeText={t('newsletter.cancel')}>
     <div class="lg:w-96">
       <form
@@ -112,7 +111,7 @@ const t = useTranslations(Astro.currentLocale as Locale)
   const sevenDaysEarlierTimestamp = new Date().getTime() - daysUntilNewsletterAsk * 24 * 60 * 60 * 1000
   if (!newsletterAskTimestamp || Number.parseInt(newsletterAskTimestamp) < sevenDaysEarlierTimestamp) {
     setTimeout(() => {
-      const newsletterTrigger = document.querySelector('#newsletter-trigger') as HTMLButtonElement
+      const newsletterTrigger = document.querySelector('#newsletter-trigger') as HTMLElement
       newsletterTrigger.click()
       localStorage.setItem('newsletterAskTimestamp', new Date().getTime().toString())
     }, delay)

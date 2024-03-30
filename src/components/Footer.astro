@@ -13,9 +13,9 @@ const currentYear = new Date().getFullYear()
       <p class="text-center text-base">
         &copy; {currentYear} - Ann-Kathrin Rahlwes | Historikerin | <a href="mailto:letstalk@rahlwes.eu"
           >letstalk@rahlwes.eu</a
-        > | <a href={getRelativeLocaleUrl(Astro.currentLocale ?? 'de', '/imprint')}>{t('imprint.title')}</a> | <a
-          href={getRelativeLocaleUrl(Astro.currentLocale ?? 'de', '/privacy')}>{t('privacy.title')}</a
-        >
+        > | <a href="#newsletter-trigger" id="newsletter-trigger">Newsletter</a> | <a
+          href={getRelativeLocaleUrl(Astro.currentLocale ?? 'de', '/imprint')}>{t('imprint.title')}</a
+        > | <a href={getRelativeLocaleUrl(Astro.currentLocale ?? 'de', '/privacy')}>{t('privacy.title')}</a>
       </p>
     </div>
   </section>
