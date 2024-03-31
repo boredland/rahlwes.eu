@@ -32,6 +32,15 @@ export default defineConfig({
         path: "src/content/posts",
         fields: [
           {
+            name: "lang",
+            label: "Language",
+            type: "string",
+            options: [
+              { label: "English", value: "en" },
+              { label: "German", value: "de" },
+            ],
+          },
+          {
             type: "string",
             name: "title",
             label: "Title",
@@ -39,10 +48,38 @@ export default defineConfig({
             required: true,
           },
           {
+            name: "pubDate",
+            label: "Publication Date",
             type: "datetime",
-            name: "posted",
-            label: "Date Posted",
             required: true,
+          },
+          {
+            name: "description",
+            label: "Description",
+            type: "string",
+            required: true,
+            description: "A short preview of the post",
+          },
+          {
+            name: "author",
+            label: "Author",
+            type: "string",
+            required: true,
+          },
+          {
+            name: "image",
+            label: "Image",
+            type: "image",
+            required: true,
+            description: "URL to the post's main image",
+          },
+          {
+            name: "tags",
+            label: "Tags",
+            type: "string",
+            options: ["exhibit", "museum", "research", "inclusion", "storytelling", "education", "tutorial"],
+            required: true,
+            list: true,
           },
           {
             type: "rich-text",
