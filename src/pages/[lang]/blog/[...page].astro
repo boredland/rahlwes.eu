@@ -7,8 +7,8 @@ import { getCollection } from 'astro:content'
 import { getAbsoluteLocaleUrl } from 'astro:i18n'
 
 export const getStaticPaths = (async ({ paginate }) => {
-  const dePosts = await getCollection('posts', (p) => p.data.lang === 'de')
-  const enPosts = await getCollection('posts', (p) => p.data.lang === 'en')
+  const dePosts = await getCollection('posts', (p) => p.data.lang === 'de' && !p.data.draft)
+  const enPosts = await getCollection('posts', (p) => p.data.lang === 'en' && !p.data.draft)
 
   const de = paginate(dePosts, { pageSize: 6, params: { lang: 'de' } })
   const en = paginate(enPosts, { pageSize: 6, params: { lang: 'en' } })

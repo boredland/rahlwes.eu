@@ -25,7 +25,14 @@ export default defineConfig({
         name: "post",
         label: "Posts",
         path: "src/content/posts",
+        format: "md",
         fields: [
+          {
+            name: 'draft',
+            label: 'Draft',
+            type: 'boolean',
+            description: 'If this is checked the post will not be published',
+          },
           {
             name: "lang",
             label: "Language",
