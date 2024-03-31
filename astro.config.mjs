@@ -4,11 +4,6 @@ import tailwind from '@astrojs/tailwind'
 import cloudflare from '@astrojs/cloudflare'
 import react from '@astrojs/react'
 
-const branch = process.env.CF_PAGES_BRANCH || 'main'
-
-const isPreview = branch !== 'main'
-
-// https://astro.build/config
 export default defineConfig({
   output: 'hybrid',
   prefetch: true,
