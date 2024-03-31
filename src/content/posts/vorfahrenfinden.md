@@ -7,7 +7,7 @@ description: >-
   Was war ihnen wichtig? Das sind die Fragen, die uns bewegen, wenn wir uns mit
   Biografien beschäftigen. Eine gute Quelle für die Forschung sind historische
   Adressbücher. 
-author: Ann-Kathrin Rahlwes
+author: Ann-Kathrin Rahlwesssd
 image: /uploads/fotokiste.webp
 tags:
   - research
@@ -27,7 +27,7 @@ Auf einer Geburtsurkunde finden Sie beispielsweise folgende Informationen zu den
 * den Nachnamen (auch den Geburtsnamen der Mutter)
 * den Beruf
 * den Wohnort und die Adresse
-* die Religionszugehörigkeit 
+* die Religionszugehörigkeit
 
 und folgende Informationen zum Kind:
 
@@ -40,19 +40,19 @@ außerdem diese allgemeinen Informationen:
 * den Namen des Standesbeamten
 * das Datum, an dem die Geburtsurkunde ausgestellt wurde
 
-Vielleicht wissen Sie aber auch nur, in welcher Stadt ihre Vorfahren lebten und einen Zeitraum. In diesem Fall können Ihnen historische Adressbücher weiterhelfen. 
+Vielleicht wissen Sie aber auch nur, in welcher Stadt ihre Vorfahren lebten und einen Zeitraum. In diesem Fall können Ihnen historische Adressbücher weiterhelfen.
 
 ## Wie kann ich historische Adressbücher nutzen, um mehr über meine Vorfahren herauszufinden?
 
 Historische Adressbücher sind eine gute Quelle für die Biografieforschung und Familienforschung ebenso wie für die Genealogie oder auch Ahnenforschung. Diese eignen sich vor allem für die Recherche zu Menschen, die im 19. und 20. Jahrhundert lebten. In Adressbüchern finden Sie neben dem Namen und der Wohnadresse auch Hinweise zum Beruf sowie zu Miet- oder Eigentumsverhältnissen Ihrer Vorfahren. Sogar Informationen über das Lebensumfeld können Sie durch die Recherche gewinnen, denn neben einem Namensregister enthalten historische Adressbücher auch ein Straßenregister zu den Einwohnern nach Hausnummern und Stockwerken. Selbst die Berufe der Nachbarn lassen sich so recherchieren. Wenn Sie verschiedene Adressbücher vergleichen, können Sie zudem Informationen über die Mobilität einer Person innerhalb einer Stadt sammeln: Wo wohnte Ihr Vorfahre oder Ihre Vorfahrin? Zog er oder sie um? Wurde ein Unternehmen gegründet? Wechselte der Unternehmenssitz? Gab es einen Geschäftspartner?
 
-Die Recherche in historischen Adressbüchern stellt also einen Baustein dar, um mehr über die Lebenswelt einer historischen Person oder einer Familie herauszufinden. Dementsprechend sind Adressbücher auch für Museen interessant, die Ausstellungen planen. 
+Die Recherche in historischen Adressbüchern stellt also einen Baustein dar, um mehr über die Lebenswelt einer historischen Person oder einer Familie herauszufinden. Dementsprechend sind Adressbücher auch für Museen interessant, die Ausstellungen planen.
 
 ## Historische Adressbücher online finden
 
 Adressbücher aus der Zeit des 19. und 20. Jahrhunderts werden in der Regel in Stadtarchiven und Stadt- oder Universitätsbibliotheken verwahrt. Mittlerweile gibt es auch zahlreiche Projekte, historische Adressbücher zu digitalisieren. So bieten genealogische Datenbanken wie familysearch oder Ancestry gegen eine Gebühr einen Onlinezugriff an. Allerdings gibt es auch zahlreiche Projekte unter anderem von Bibliotheken, die diese Unterlagen kostenlos zur Verfügung stellen. In vielen Fällen sind die Adressbücher sogar vollständig nach Namen durchsuchbar - eine unschätzbare Hilfe, um Vorfahren schnell zu finden.
 
-### Das Projekt Adressbücher des Vereins für Computergenealogie e.V. (CompGen) 
+### Das Projekt Adressbücher des Vereins für Computergenealogie e.V. (CompGen)
 
 Seit 2003 erfasst der Verein mit Hilfe freiwilliger Helfer systematisch historische Adressbücher. In der Datenbank Historischer Adressbücher kann nach Nachnamen, Vornamen, Berufen und Wohnorten recherchiert werden.
 
@@ -106,9 +106,9 @@ Allgemeine und spezielle Adressbücher zu den Einwohnern der Stadt [Wien](https:
 
 #### In historischen Adressbüchern nach den Vorfahren recherchieren
 
-Wählen Sie ein Jahr aus, rufen Sie das Namenregister der Einwohner auf und suchen Sie nun nach dem ersten Buchstaben des Nachnamens Ihres Vorfahrens: Beginnen Sie nun mit der Recherche nach dem Nachnamen Ihres Vorfahren. Wenn Sie ihn gefunden haben, können Sie seine Wohn- und Geschäftsadresse zusätzlich im Straßenregister nachschlagen. Auch Geschäftsanzeigen, ein Branchenregister oder auch ein Behördenverzeichnis kann Bestandteil eines historischen Adressbuchs sein. 
+Wählen Sie ein Jahr aus, rufen Sie das Namenregister der Einwohner auf und suchen Sie nun nach dem ersten Buchstaben des Nachnamens Ihres Vorfahrens: Beginnen Sie nun mit der Recherche nach dem Nachnamen Ihres Vorfahren. Wenn Sie ihn gefunden haben, können Sie seine Wohn- und Geschäftsadresse zusätzlich im Straßenregister nachschlagen. Auch Geschäftsanzeigen, ein Branchenregister oder auch ein Behördenverzeichnis kann Bestandteil eines historischen Adressbuchs sein.
 
-**Um mehr über eine Firmengründung zu erfahren, können Sie den “Anzeiger für Handel und Industrie” und das Branchenverzeichnis nutzen. **
+\*\*Um mehr über eine Firmengründung zu erfahren, können Sie den “Anzeiger für Handel und Industrie” und das Branchenverzeichnis nutzen. \*\*
 
 **Um mehr über eine Person, ihren Beruf und ihre Wohnadresse zu erfahren, können Sie das Einwohnerverzeichnis und die Straßenkarte verwenden.**
 
