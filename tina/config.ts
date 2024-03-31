@@ -28,14 +28,14 @@ export default defineConfig({
         format: "md",
         fields: [
           {
-            name: 'draft',
             label: 'Draft',
+            name: 'draft',
             type: 'boolean',
             description: 'If this is checked the post will not be published',
           },
           {
-            name: "lang",
             label: "Language",
+            name: "lang",
             type: "string",
             options: [
               { label: "English", value: "en" },
@@ -43,21 +43,21 @@ export default defineConfig({
             ],
           },
           {
-            type: "string",
-            name: "title",
             label: "Title",
+            name: "title",
+            type: "string",
             isTitle: true,
             required: true,
           },
           {
-            name: "posted",
             label: "Publication Date",
+            name: "posted",
             type: "datetime",
             required: true,
           },
           {
-            name: "description",
             label: "Description",
+            name: "description",
             type: "string",
             required: true,
             description: "A short preview of the post",
