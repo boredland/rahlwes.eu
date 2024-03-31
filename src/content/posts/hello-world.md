@@ -1,8 +1,14 @@
 ---
-title: Hello, World!
+lang: en
+title: Hello World!
+pubDate: 1990-01-01
+description: Beispielzusammenfassung
+author: Ann-Kathrin Rahlwes
+image: https://upload.wikimedia.org/wikipedia/en/a/a9/Example.jpg
+tags: [test, abc]
 ---
 
-## Hello World!
+## Hello World
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non lorem diam. Quisque vulputate nibh sodales eros pretium tincidunt. Aenean porttitor efficitur convallis. Nulla sagittis finibus convallis. Phasellus in fermentum quam, eu egestas tortor. Maecenas ac mollis leo. Integer maximus eu nisl vel sagittis.
 
