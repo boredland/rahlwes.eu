@@ -17,3 +17,9 @@ Static content can be managed via Github, just edit the [english](/src/locales/e
 ## Analytics
 
 TBD. Perhaps self-hosted plausible?
+
+## Deployments
+
+All pages are automatically deployed to Cloudflare pages and thus globally served on the edge.
+
+Each pushed commit triggers a build. Pull-Request preview-deployments are enabled. For preview deployments, the default locale is `/de`.
