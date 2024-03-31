@@ -1,7 +1,7 @@
 ---
 lang: en
 title: Hello World!
-pubDate: 1990-01-01
+posted: 1990-01-01
 description: Beispielzusammenfassung
 author: Ann-Kathrin Rahlwes
 image: https://upload.wikimedia.org/wikipedia/en/a/a9/Example.jpg
