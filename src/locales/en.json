@@ -1,6 +1,8 @@
 {
   "blog.title": "Journal",
-  "blog.description": "An example of a blog with dynamic content fetched from JSONPlaceholder using the title, body and userId.",
+  "blog.page-title": "Let’s talk about history!",
+  "blog.subtitle": "Our journal",
+  "blog.description": "We explain how historical knowledge is created, what is currently being discussed and how history affects our lives. We want to encourage you to follow the clues and discover history. To do this, we offer you our concentrated know-how and expertise.",
   "newsletter.subscribe": "Subscribe",
   "newsletter.title": "Join the conversation!",
   "newsletter.description": "Sign up for our newsletter and receive regular insights into our work and exciting input on historical topics.",

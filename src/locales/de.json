@@ -1,6 +1,8 @@
 {
   "blog.title": "Journal",
-  "blog.description": "Ein Beispiel für einen Blog mit dynamischen Inhalten, die von JSONPlaceholder unter Verwendung des Titels, des Textkörpers und der UserId abgerufen werden.",
+  "blog.page-title": "Let’s talk about history!",
+  "blog.subtitle": "Unser Journal",
+  "blog.description": "Wir klären auf, wie historisches Wissen entsteht; worüber aktuell diskutiert wird und inwiefern Geschichte unser Leben beeinflusst. Wir wollen Sie ermutigen, auf Spurensuche zu gehen und Geschichte(n) zu entdecken. Dafür geben wir Ihnen unser geballtes Know-How und Fachwissen mit auf den Weg.",
   "newsletter.subscribe": "Abonnieren",
   "newsletter.title": "Kommen Sie mit uns ins Gespräch!",
   "newsletter.description": "Tragen Sie sich für unseren Newsletter ein und erhalten Sie regelmäßige Insights zu unserer Arbeit und spannenden Input zu historischen Themen.",
