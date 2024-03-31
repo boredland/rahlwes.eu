@@ -10,7 +10,7 @@ const t = useTranslations(Astro.currentLocale as Locale)
 
 <header>
   <Modal triggerId="newsletter-trigger" closeText={t('newsletter.cancel')}>
-    <div class="lg:w-96">
+    <div class="max-w-96">
       <form
         method="post"
         action={`https://lists.rahlwes.eu/subscription/form?redirect=${url}?newsletter=success`}
@@ -20,16 +20,19 @@ const t = useTranslations(Astro.currentLocale as Locale)
         <p>{t('newsletter.description')}</p>
         <input type="hidden" name="nonce" />
         <input id="bd8da" type="hidden" name="l" checked value="bd8da52f-8b88-4da7-8025-fb3efc516165" />
-        <div class="grid grid-cols-2 gap-5">
+        <div class="grid grid-flow-row gap-10 lg:gap-3">
+          <label class="mb-2 block text-xs font-bold uppercase tracking-wide" for="grid-email">
+            {t('home.contact.email')}
+          </label>
           <input
-            class="block min-w-48 max-w-60 appearance-none rounded border px-4 py-2 leading-tight focus:bg-white focus:outline-none"
+            class="block w-auto appearance-none rounded border px-3 py-3 leading-tight focus:bg-white focus:outline-none"
             id="grid-email"
             type="email"
             name="email"
             placeholder="jane.doe@email.com"
             required
           />
-          <button type="submit" class="button max-w-32">{t('newsletter.subscribe')}</button>
+          <button type="submit" class="button w-min">{t('newsletter.subscribe')}</button>
         </div>
       </form>
     </div>
