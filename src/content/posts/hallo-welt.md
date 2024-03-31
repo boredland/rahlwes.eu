@@ -4,7 +4,7 @@ title: Hallo Welt 123!
 posted: 1990-01-01T00:00:00.000Z
 description: Example summary text
 author: Ann-Kathrin Rahlwes
-image: /uploads/uploads/avatar02.webp
+image: /uploads/anka-sitzend.webp
 tags:
   - test
   - abc
