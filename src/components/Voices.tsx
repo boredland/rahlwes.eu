@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import { useState } from 'react'
 import Slider from 'slick-slider-react'
 
 const Quote: React.FC<{ text: string; author: string }> = ({ text, author }) => (

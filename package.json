@@ -5,11 +5,11 @@
   "author": "Jonas Strassel",
   "homepage": "https://rahlwes.eu/",
   "scripts": {
-    "dev": "astro dev",
+    "dev": "tinacms dev -c \"astro dev\"",
     "start": "astro dev",
     "astro": "astro",
     "check": "astro check",
-    "build": "astro check && astro build && cp _redirects ./dist/",
+    "build": "astro check && tinacms build && astro build && cp _redirects ./dist/",
     "preview": "astro build && wrangler pages dev ./dist",
     "deploy": "astro build && wrangler pages deploy ./dist",
     "build-cf-types": "wrangler types"
@@ -22,6 +22,8 @@
     "@astrojs/partytown": "^2.0.4",
     "@astrojs/tailwind": "^5.1.0",
     "@cloudflare/workers-types": "^4.20240320.1",
+    "@tinacms/cli": "^1.5.43",
+    "@types/node": "^20.12.2",
     "@types/react": "^18.2.72",
     "@typescript-eslint/eslint-plugin": "^7.4.0",
     "@typescript-eslint/parser": "^7.4.0",
@@ -44,6 +46,7 @@
     "@astrojs/react": "^3.1.0",
     "accept-language": "^3.0.18",
     "slick-slider-react": "^2.0.1",
+    "tinacms": "^1.6.1",
     "typescript": "^5.4.3"
   }
 }
