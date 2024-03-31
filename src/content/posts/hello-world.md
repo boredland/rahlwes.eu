@@ -1,11 +1,13 @@
 ---
 lang: en
 title: Hello World!
-posted: 1990-01-01
+posted: 1990-01-01T00:00:00.000Z
 description: Beispielzusammenfassung
 author: Ann-Kathrin Rahlwes
-image: https://upload.wikimedia.org/wikipedia/en/a/a9/Example.jpg
-tags: [test, abc]
+image: /uploads/anka-rtl.webp
+tags:
+  - test
+  - abc
 ---
 
 ## Hello World
