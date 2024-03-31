@@ -1,10 +1,12 @@
-/museen         /de/museums 302
-/museum         /en/museums 302
-/team           /de/team 302
-/about-us       /en/team 302
-/familie        /de/families 302
-/for-families   /en/families 302
-/impressum      /de/imprint 302
-/legal-notice   /en/imprint 302
-/datenschutz    /de/data-protection
-/service        /en/ 302
+/museum         /en/museums         302
+/museen         /de/museums         302
+/team           /de/team            302
+/about-us       /en/team            302
+/familie        /de/families        302
+/for-families   /en/families        302
+/impressum      /de/imprint         302
+/legal-notice   /en/imprint         302
+/datenschutz    /de/data-protection 302
+/service        /en/                302
+/journal        /de/blog            302
+/journal-en     /en/blog            302
