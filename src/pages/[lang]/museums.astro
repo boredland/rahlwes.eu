@@ -34,13 +34,13 @@ export const prerender = true
   <section class="my-64">
     <ContentMedia imgSrc={microscope} reverseImg>
       <h4>{t('museums.research.title')}</h4>
-      {(t('museums.research.p') as string[]).map((paragraph) => <p class="text-xl">{paragraph}</p>)}
+      {t('museums.research.p').map((paragraph) => <p class="text-xl">{paragraph}</p>)}
     </ContentMedia>
   </section>
   <section class="my-64">
     <ContentMedia imgSrc={teekanne} reverseImg>
       <h4>{t('museums.insights.title')}</h4>
-      {(t('museums.insights.p') as string[]).map((paragraph) => <p class="text-xl">{paragraph}</p>)}
+      {t('museums.insights.p').map((paragraph) => <p class="text-xl">{paragraph}</p>)}
     </ContentMedia>
   </section>
   <section class="my-64">

@@ -42,12 +42,12 @@ export const prerender = true
     <Accordion>
       <AccordionItem header={t('team.speeches')}>
         <ul class="list-disc px-4">
-          {(t('team.anka.speeches') as string[]).map((speech) => <li>{speech}</li>)}
+          {t('team.anka.speeches').map((speech) => <li>{speech}</li>)}
         </ul>
       </AccordionItem>
       <AccordionItem header={t('team.publications')}>
         <ul class="list-disc px-4">
-          {(t('team.anka.publications') as string[]).map((publication) => <li>{publication}</li>)}
+          {t('team.anka.publications').map((publication) => <li>{publication}</li>)}
         </ul>
       </AccordionItem>
     </Accordion>
@@ -72,17 +72,17 @@ export const prerender = true
     <Accordion>
       <AccordionItem header={t('team.speeches')}>
         <ul class="list-disc px-4">
-          {(t('team.ellen.speeches') as string[]).map((publication) => <li>{publication}</li>)}
+          {t('team.ellen.speeches').map((publication) => <li>{publication}</li>)}
         </ul>
       </AccordionItem>
       <AccordionItem header={t('team.publications')}>
         <ul class="list-disc px-4">
-          {(t('team.ellen.publications') as string[]).map((publication) => <li>{publication}</li>)}
+          {t('team.ellen.publications').map((publication) => <li>{publication}</li>)}
         </ul>
       </AccordionItem>
       <AccordionItem header={t('team.translations')}>
         <ul class="list-disc px-4">
-          {(t('team.ellen.translations') as string[]).map((publication) => <li>{publication}</li>)}
+          {t('team.ellen.translations').map((publication) => <li>{publication}</li>)}
         </ul>
       </AccordionItem>
     </Accordion>

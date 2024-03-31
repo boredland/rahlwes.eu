@@ -15,7 +15,7 @@ export const getLangFromUrl = (url: URL) => {
 }
 
 export const useTranslations = (lang: Locale = "de") => {
-  return function t(key: keyof (typeof translations)["en"]) {
+  return function t<Key extends  keyof (typeof translations)["en"]>(key: Key) {
     const dict = translations[lang] ?? translations.en;
     return dict[key]
   }
