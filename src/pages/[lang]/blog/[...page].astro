@@ -1,0 +1,81 @@
+---
+import type { GetStaticPaths, InferGetStaticPropsType, Page } from 'astro'
+import DefaultLayout from '../../../layouts/DefaultLayout.astro'
+import { Card, Pagination } from 'accessible-astro-components'
+import { useTranslations, type Locale } from '../../../utils/i18n'
+import { getCollection } from 'astro:content'
+import { getAbsoluteLocaleUrl } from 'astro:i18n'
+
+export const getStaticPaths = (async ({ paginate }) => {
+  const dePosts = await getCollection('posts', (p) => p.data.lang === 'de')
+  const enPosts = await getCollection('posts', (p) => p.data.lang === 'en')
+
+  const de = paginate(dePosts, { pageSize: 6, params: { lang: 'de' } })
+  const en = paginate(enPosts, { pageSize: 6, params: { lang: 'en' } })
+
+  return [...de, ...en]
+}) satisfies GetStaticPaths
+
+const t = useTranslations(Astro.currentLocale as Locale)
+
+type Props = InferGetStaticPropsType<typeof getStaticPaths>
+
+const { page } = Astro.props
+---
+
+<DefaultLayout title={t('blog.title')} description={t('blog.description')}>
+  <section class="my-12">
+    <div class="space-content container">
+      <h1>{t('blog.title')}</h1>
+      <p class="text-2xl">{t('blog.description')}</p>
+    </div>
+  </section>
+  <section class="my-12">
+    <div class="container">
+      <p class="text-sm"><em>Post {page.start + 1} through {page.end + 1} of {page.total} total posts</em></p>
+      <ul class="my-3">
+        {
+          page.data.map((post) => (
+            <li>
+              <Card
+                url={getAbsoluteLocaleUrl(Astro.currentLocale ?? 'de', `/blog/${post.slug}`)}
+                title={post.data.title}
+                footer={post.data.author}
+                img={post.data.image}
+              >
+                {post.data.description}
+              </Card>
+            </li>
+          ))
+        }
+      </ul>
+      <div class="mt-12 grid place-content-center">
+        <Pagination
+          firstPage={page.url.prev ? '/blog' : null}
+          previousPage={page.url.prev ? page.url.prev : null}
+          nextPage={page.url.next ? page.url.next : null}
+          lastPage={page.url.next ? `/blog/${Math.round(page.total / page.size)}` : null}
+          currentPage={page.currentPage}
+          totalPages={Math.round(page.total / page.size) > 0 ? Math.round(page.total / page.size) : 1}
+        />
+      </div>
+    </div>
+  </section>
+</DefaultLayout>
+
+<style lang="scss">
+  ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 4rem;
+
+    @media (min-width: 550px) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 2rem;
+    }
+
+    @media (min-width: 950px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+</style>

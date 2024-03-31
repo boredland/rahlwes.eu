@@ -4,18 +4,16 @@ import tailwind from '@astrojs/tailwind'
 import cloudflare from '@astrojs/cloudflare'
 import react from '@astrojs/react'
 
-const branch =
-  process.env.CF_PAGES_BRANCH ||
-  "main";
+const branch = process.env.CF_PAGES_BRANCH || 'main'
 
-const isPreview = branch !== "main";
+const isPreview = branch !== 'main'
 
 // https://astro.build/config
 export default defineConfig({
-  output: "hybrid",
+  output: 'hybrid',
   prefetch: true,
   adapter: cloudflare({
-    imageService: "compile",
+    imageService: 'compile',
   }),
   trailingSlash: 'ignore',
   compressHTML: true,
@@ -24,7 +22,7 @@ export default defineConfig({
     tailwind({
       applyBaseStyles: false,
     }),
-    react()
+    react(),
   ],
   trailingSlash: 'ignore',
   i18n: {
@@ -35,7 +33,4 @@ export default defineConfig({
       redirectToDefaultLocale: false,
     },
   },
-  redirects: isPreview ? {
-    '/': '/de',
-  } : {},
 })

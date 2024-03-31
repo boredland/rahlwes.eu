@@ -1,4 +1,6 @@
 {
+  "blog.title": "Journal",
+  "blog.description": "An example of a blog with dynamic content fetched from JSONPlaceholder using the title, body and userId.",
   "newsletter.subscribe": "Subscribe",
   "newsletter.title": "Join the conversation!",
   "newsletter.description": "Sign up for our newsletter and receive regular insights into our work and exciting input on historical topics.",

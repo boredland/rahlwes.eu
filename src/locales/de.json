@@ -1,4 +1,6 @@
 {
+  "blog.title": "Journal",
+  "blog.description": "Ein Beispiel für einen Blog mit dynamischen Inhalten, die von JSONPlaceholder unter Verwendung des Titels, des Textkörpers und der UserId abgerufen werden.",
   "newsletter.subscribe": "Abonnieren",
   "newsletter.title": "Kommen Sie mit uns ins Gespräch!",
   "newsletter.description": "Tragen Sie sich für unseren Newsletter ein und erhalten Sie regelmäßige Insights zu unserer Arbeit und spannenden Input zu historischen Themen.",

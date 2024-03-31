@@ -16,7 +16,7 @@ Static content can be managed via Github, just edit the [english](/src/locales/e
 
 ## Analytics
 
-TBD. Perhaps self-hosted plausible?
+Perhaps Cloudflare analytics are enough to begin with.
 
 ## Deployments
 
