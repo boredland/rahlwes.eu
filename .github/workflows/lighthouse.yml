@@ -47,5 +47,7 @@ jobs:
             ${{ steps.cf.outputs.url }}/de/museums/
             ${{ steps.cf.outputs.url }}/en/families/
             ${{ steps.cf.outputs.url }}/de/families/
+            ${{ steps.cf.outputs.url }}/en/blog/
+            ${{ steps.cf.outputs.url }}/de/blog/
           uploadArtifacts: true # save results as an action artifacts
           temporaryPublicStorage: true # upload lighthouse report to the temporary storage
