@@ -4,6 +4,7 @@ import cloudflare from '@astrojs/cloudflare'
 import react from '@astrojs/react'
 
 export default defineConfig({
+  site: process.env.CF_PAGES_URL,
   output: 'hybrid',
   prefetch: true,
   adapter: cloudflare({
