@@ -8,8 +8,8 @@
     "dev": "tinacms dev -c \"astro dev\"",
     "start": "astro dev",
     "astro": "astro",
-    "check": "astro check",
-    "build": "astro check && tinacms build && astro build && cp _redirects ./dist/",
+    "check": "i18n-typegen codegen && astro check",
+    "build": "npm run check && tinacms build && astro build && cp _redirects ./dist/",
     "preview": "astro build && wrangler pages dev ./dist",
     "deploy": "astro build && wrangler pages deploy ./dist",
     "build-cf-types": "wrangler types"
@@ -21,6 +21,7 @@
     "@astrojs/mdx": "^2.2.2",
     "@astrojs/partytown": "^2.0.4",
     "@astrojs/tailwind": "^5.1.0",
+    "@betomorrow/i18n-typegen": "^1.0.0",
     "@cloudflare/workers-types": "^4.20240320.1",
     "@tinacms/cli": "^1.5.43",
     "@types/node": "^20.12.2",
@@ -45,6 +46,7 @@
     "@astrojs/cloudflare": "^10.0.0",
     "@astrojs/react": "^3.1.0",
     "accept-language": "^3.0.18",
+    "i18next": "^23.10.1",
     "slick-slider-react": "^2.0.1",
     "tinacms": "^1.6.1",
     "typescript": "^5.4.3"
