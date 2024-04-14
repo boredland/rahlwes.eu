@@ -8,7 +8,7 @@ export default defineConfig({
   output: 'hybrid',
   prefetch: true,
   adapter: cloudflare({
-    imageService: 'compile',
+    imageService: 'cloudflare',
   }),
   trailingSlash: 'ignore',
   compressHTML: true,
