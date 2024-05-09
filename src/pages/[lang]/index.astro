@@ -1,24 +1,28 @@
 ---
-import DefaultLayout from '../../layouts/DefaultLayout.astro'
-import Hero from '../../components/Hero.astro'
-import Feature from '../../components/Feature.astro'
-import ContentMedia from '../../components/ContentMedia.astro'
-import { getStaticPaths, useTranslations, type Locale } from '../../utils/i18n'
-import lupe from '../../assets/img/lupe.webp'
-import fotokiste from '../../assets/img/fotokiste.webp'
-import fotoHand from '../../assets/img/foto-hand.webp'
-import buchHand from '../../assets/img/buch-hand.webp'
-import pair from '../../assets/img/pair-bubbles.webp'
-import { Image } from 'astro:assets'
-import { Notification, Accordion, AccordionItem } from 'accessible-astro-components'
-import Voices from '../../components/Voices'
+import { Image } from "astro:assets";
+import {
+	Accordion,
+	AccordionItem,
+	Notification,
+} from "accessible-astro-components";
+import buchHand from "../../assets/img/buch-hand.webp";
+import fotoHand from "../../assets/img/foto-hand.webp";
+import fotokiste from "../../assets/img/fotokiste.webp";
+import lupe from "../../assets/img/lupe.webp";
+import pair from "../../assets/img/pair-bubbles.webp";
+import ContentMedia from "../../components/ContentMedia.astro";
+import Feature from "../../components/Feature.astro";
+import Hero from "../../components/Hero.astro";
+import Voices from "../../components/Voices";
+import DefaultLayout from "../../layouts/DefaultLayout.astro";
+import { type Locale, getStaticPaths, useTranslations } from "../../utils/i18n";
 
-const t = useTranslations(Astro.currentLocale as Locale)
-const redirectUrl = new URL(Astro.url.toString())
-redirectUrl.searchParams.set('sent', 'true')
+const t = useTranslations(Astro.currentLocale as Locale);
+const redirectUrl = new URL(Astro.url.toString());
+redirectUrl.searchParams.set("sent", "true");
 
-export { getStaticPaths } from '../../utils/i18n'
-export const prerender = true
+export { getStaticPaths } from "../../utils/i18n";
+export const prerender = true;
 ---
 
 <DefaultLayout title={t('home.title')}>

@@ -1,9 +1,9 @@
 {
-  "input": {
-    "format": "flatten",
-    "path": "./src/locales/en.json"
-  },
-  "output": {
-    "path": "./src/translations.d.ts"
-  }
+	"input": {
+		"format": "flatten",
+		"path": "./src/locales/en.json"
+	},
+	"output": {
+		"path": "./src/translations.d.ts"
+	}
 }

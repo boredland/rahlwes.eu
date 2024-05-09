@@ -8,7 +8,7 @@
 		"dev": "tinacms dev -c \"astro dev\"",
 		"start": "astro dev",
 		"astro": "astro",
-		"check": "i18n-typegen codegen && npx @biomejs/biome check --apply . && astro check",
+		"check": "i18n-typegen codegen && npx @biomejs/biome check --apply . --vcs-use-ignore-file=true && astro check",
 		"build": "npm run check && tinacms build && astro build && cp _redirects ./dist/",
 		"preview": "astro build && wrangler pages dev ./dist",
 		"deploy": "astro build && wrangler pages deploy ./dist",

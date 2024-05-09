@@ -1,5 +1,7 @@
 # build output
 dist
+tina/__generated__
+.astro
 
 # dependencies
 node_modules/
