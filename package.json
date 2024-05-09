@@ -1,47 +1,49 @@
 {
-  "name": "rahlwes-eu",
-  "description": "Marketing site for rahlwes.eu",
-  "version": "3.1.2",
-  "author": "Jonas Strassel",
-  "homepage": "https://rahlwes.eu/",
-  "scripts": {
-    "dev": "tinacms dev -c \"astro dev\"",
-    "start": "astro dev",
-    "astro": "astro",
-    "check": "i18n-typegen codegen && npx @biomejs/biome check --apply . && astro check",
-    "build": "npm run check && tinacms build && astro build && cp _redirects ./dist/",
-    "preview": "astro build && wrangler pages dev ./dist",
-    "deploy": "astro build && wrangler pages deploy ./dist",
-    "build-cf-types": "wrangler types"
-  },
-  "overrides": {
-    "sharp": "0.33.3"
-  },
-  "devDependencies": {
-    "@astrojs/mdx": "^3.0.0",
-    "@astrojs/partytown": "^2.1.0",
-    "@astrojs/tailwind": "^5.1.0",
-    "@betomorrow/i18n-typegen": "^1.1.0",
-    "@biomejs/biome": "1.7.3",
-    "@cloudflare/workers-types": "^4.20240502.0",
-    "@tinacms/cli": "^1.5.45",
-    "@types/node": "^20.12.11",
-    "@types/react": "^18.3.1",
-    "accessible-astro-components": "^2.3.6",
-    "astro": "^4.8.1",
-    "astro-compress": "^2.2.19",
-    "sass": "^1.77.0",
-    "tailwindcss": "^3.4.3",
-    "wrangler": "^3.53.1"
-  },
-  "dependencies": {
-    "@astrojs/check": "^0.6.0",
-    "@astrojs/cloudflare": "^10.2.5",
-    "@astrojs/react": "^3.3.4",
-    "accept-language": "^3.0.18",
-    "i18next": "^23.11.3",
-    "slick-slider-react": "^2.0.1",
-    "tinacms": "^1.6.3",
-    "typescript": "^5.4.5"
-  }
+	"name": "rahlwes-eu",
+	"description": "Marketing site for rahlwes.eu",
+	"version": "3.1.2",
+	"author": "Jonas Strassel",
+	"homepage": "https://rahlwes.eu/",
+	"scripts": {
+		"dev": "tinacms dev -c \"astro dev\"",
+		"start": "astro dev",
+		"astro": "astro",
+		"check": "i18n-typegen codegen && npx @biomejs/biome check --apply . && astro check",
+		"build": "npm run check && tinacms build && astro build && cp _redirects ./dist/",
+		"preview": "astro build && wrangler pages dev ./dist",
+		"deploy": "astro build && wrangler pages deploy ./dist",
+		"build-cf-types": "wrangler types",
+		"postinstall": "lefthook install"
+	},
+	"overrides": {
+		"sharp": "0.33.3"
+	},
+	"devDependencies": {
+		"@astrojs/mdx": "^3.0.0",
+		"@astrojs/partytown": "^2.1.0",
+		"@astrojs/tailwind": "^5.1.0",
+		"@betomorrow/i18n-typegen": "^1.1.0",
+		"@biomejs/biome": "1.7.3",
+		"@cloudflare/workers-types": "^4.20240502.0",
+		"@tinacms/cli": "^1.5.45",
+		"@types/node": "^20.12.11",
+		"@types/react": "^18.3.1",
+		"accessible-astro-components": "^2.3.6",
+		"astro": "^4.8.1",
+		"astro-compress": "^2.2.19",
+		"lefthook": "^1.6.10",
+		"sass": "^1.77.0",
+		"tailwindcss": "^3.4.3",
+		"wrangler": "^3.53.1"
+	},
+	"dependencies": {
+		"@astrojs/check": "^0.6.0",
+		"@astrojs/cloudflare": "^10.2.5",
+		"@astrojs/react": "^3.3.4",
+		"accept-language": "^3.0.18",
+		"i18next": "^23.11.3",
+		"slick-slider-react": "^2.0.1",
+		"tinacms": "^1.6.3",
+		"typescript": "^5.4.5"
+	}
 }
