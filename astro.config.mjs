@@ -18,7 +18,6 @@ export default defineConfig({
     }),
     react(),
   ],
-  trailingSlash: 'ignore',
   i18n: {
     locales: ['en', 'de'],
     defaultLocale: 'de',
