@@ -1,11 +1,15 @@
 ---
-import Navigation from '../components/Navigation.astro'
-import { Modal, SkipLinks } from 'accessible-astro-components'
-import { getRelativeLocaleUrl } from 'astro:i18n'
-import { getCurrentLocalizedPath, useTranslations, type Locale } from '../utils/i18n'
+import { getRelativeLocaleUrl } from "astro:i18n";
+import { Modal, SkipLinks } from "accessible-astro-components";
+import Navigation from "../components/Navigation.astro";
+import {
+	type Locale,
+	getCurrentLocalizedPath,
+	useTranslations,
+} from "../utils/i18n";
 
-const url = Astro.url
-const t = useTranslations(Astro.currentLocale as Locale)
+const url = Astro.url;
+const t = useTranslations(Astro.currentLocale as Locale);
 ---
 
 <header>

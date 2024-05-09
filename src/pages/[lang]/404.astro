@@ -1,11 +1,11 @@
 ---
-import DefaultLayout from '../../layouts/DefaultLayout.astro'
-import { useTranslations, type Locale } from '../../utils/i18n'
+import DefaultLayout from "../../layouts/DefaultLayout.astro";
+import { type Locale, useTranslations } from "../../utils/i18n";
 
-const t = useTranslations(Astro.currentLocale as Locale)
+const t = useTranslations(Astro.currentLocale as Locale);
 
-export { getStaticPaths } from '../../utils/i18n'
-export const prerender = true
+export { getStaticPaths } from "../../utils/i18n";
+export const prerender = true;
 ---
 
 <DefaultLayout title="404">

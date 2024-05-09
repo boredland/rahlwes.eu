@@ -1,26 +1,32 @@
 ---
-import type { GetStaticPaths, InferGetStaticPropsType } from 'astro'
-import DefaultLayout from '../../../layouts/DefaultLayout.astro'
-import { Card, Pagination } from 'accessible-astro-components'
-import { useTranslations, type Locale } from '../../../utils/i18n'
-import { getCollection } from 'astro:content'
-import { getAbsoluteLocaleUrl } from 'astro:i18n'
+import { getCollection } from "astro:content";
+import { getAbsoluteLocaleUrl } from "astro:i18n";
+import { Card, Pagination } from "accessible-astro-components";
+import type { GetStaticPaths, InferGetStaticPropsType } from "astro";
+import DefaultLayout from "../../../layouts/DefaultLayout.astro";
+import { type Locale, useTranslations } from "../../../utils/i18n";
 
 export const getStaticPaths = (async ({ paginate }) => {
-  const dePosts = await getCollection('posts', (p) => p.data.lang === 'de' && !p.data.draft)
-  const enPosts = await getCollection('posts', (p) => p.data.lang === 'en' && !p.data.draft)
+	const dePosts = await getCollection(
+		"posts",
+		(p) => p.data.lang === "de" && !p.data.draft,
+	);
+	const enPosts = await getCollection(
+		"posts",
+		(p) => p.data.lang === "en" && !p.data.draft,
+	);
 
-  const de = paginate(dePosts, { pageSize: 6, params: { lang: 'de' } })
-  const en = paginate(enPosts, { pageSize: 6, params: { lang: 'en' } })
+	const de = paginate(dePosts, { pageSize: 6, params: { lang: "de" } });
+	const en = paginate(enPosts, { pageSize: 6, params: { lang: "en" } });
 
-  return [...de, ...en]
-}) satisfies GetStaticPaths
+	return [...de, ...en];
+}) satisfies GetStaticPaths;
 
-const t = useTranslations(Astro.currentLocale as Locale)
+const t = useTranslations(Astro.currentLocale as Locale);
 
-type Props = InferGetStaticPropsType<typeof getStaticPaths>
+type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 
-const { page } = Astro.props
+const { page } = Astro.props;
 ---
 
 <DefaultLayout title={t('blog.title')} description={t('blog.description')}>

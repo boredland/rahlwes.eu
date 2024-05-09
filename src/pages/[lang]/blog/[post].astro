@@ -1,27 +1,27 @@
 ---
-import { getCollection } from 'astro:content'
-import DefaultLayout from '../../../layouts/DefaultLayout.astro'
-import { Breadcrumbs, BreadcrumbsItem } from 'accessible-astro-components'
-import { getAbsoluteLocaleUrl } from 'astro:i18n'
+import { getCollection } from "astro:content";
+import { getAbsoluteLocaleUrl } from "astro:i18n";
+import { Breadcrumbs, BreadcrumbsItem } from "accessible-astro-components";
+import DefaultLayout from "../../../layouts/DefaultLayout.astro";
 
 type Post = {
-  userId: number
-  id: number
-  title: string
-  body: string
-}
+	userId: number;
+	id: number;
+	title: string;
+	body: string;
+};
 
 export async function getStaticPaths() {
-  const blogEntries = await getCollection('posts')
+	const blogEntries = await getCollection("posts");
 
-  return blogEntries.map((post) => ({
-    params: { post: post.slug, lang: post.data.lang },
-    props: post,
-  }))
+	return blogEntries.map((post) => ({
+		params: { post: post.slug, lang: post.data.lang },
+		props: post,
+	}));
 }
 
-const post = Astro.props
-const { Content } = await post.render()
+const post = Astro.props;
+const { Content } = await post.render();
 ---
 
 <DefaultLayout title={post.data.title} description={post.body} url={post.data.title}>

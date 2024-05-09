@@ -1,13 +1,13 @@
 ---
-import { Image } from 'astro:assets'
+import { Image } from "astro:assets";
 
 type Props = {
-  imgSrc: ImageMetadata
-  reverseImg?: boolean
-  alt?: string
-}
+	imgSrc: ImageMetadata;
+	reverseImg?: boolean;
+	alt?: string;
+};
 
-const { imgSrc, reverseImg = false, alt = '' } = Astro.props
+const { imgSrc, reverseImg = false, alt = "" } = Astro.props;
 ---
 
 <section class="my-64">

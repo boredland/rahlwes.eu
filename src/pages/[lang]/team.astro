@@ -1,17 +1,17 @@
 ---
-import ContentMedia from '../../components/ContentMedia.astro'
-import DefaultLayout from '../../layouts/DefaultLayout.astro'
-import { useTranslations, type Locale } from '../../utils/i18n'
-import anka from '../../assets/img/anka-sitzend.webp'
-import ellen from '../../assets/img/ellen-lesend.webp'
-import fotokiste from '../../assets/img/fotokiste.webp'
-import buchhand from '../../assets/img/buchhand.webp'
-import { Accordion, AccordionItem } from 'accessible-astro-components'
+import { Accordion, AccordionItem } from "accessible-astro-components";
+import anka from "../../assets/img/anka-sitzend.webp";
+import buchhand from "../../assets/img/buchhand.webp";
+import ellen from "../../assets/img/ellen-lesend.webp";
+import fotokiste from "../../assets/img/fotokiste.webp";
+import ContentMedia from "../../components/ContentMedia.astro";
+import DefaultLayout from "../../layouts/DefaultLayout.astro";
+import { type Locale, useTranslations } from "../../utils/i18n";
 
-const t = useTranslations(Astro.currentLocale as Locale)
+const t = useTranslations(Astro.currentLocale as Locale);
 
-export { getStaticPaths } from '../../utils/i18n'
-export const prerender = true
+export { getStaticPaths } from "../../utils/i18n";
+export const prerender = true;
 ---
 
 <DefaultLayout title={t('team.title')}>

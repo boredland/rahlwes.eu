@@ -1,10 +1,10 @@
 ---
-import { type Locale, useTranslations } from '../utils/i18n'
-import anka from '../assets/img/anka-rtl.webp'
-import { Image } from 'astro:assets'
-import { getRelativeLocaleUrl } from 'astro:i18n'
+import { Image } from "astro:assets";
+import { getRelativeLocaleUrl } from "astro:i18n";
+import anka from "../assets/img/anka-rtl.webp";
+import { type Locale, useTranslations } from "../utils/i18n";
 
-const t = useTranslations(Astro.currentLocale as Locale)
+const t = useTranslations(Astro.currentLocale as Locale);
 ---
 
 <section class="hero my-24">

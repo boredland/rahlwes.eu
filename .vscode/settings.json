@@ -1,40 +1,35 @@
 {
-  "i18n-ally.localesPaths": ["locales"],
-  "i18n-ally.keystyle": "nested",
-  "i18n-ally.sourceLanguage": "de",
-  "i18n-ally.namespace": true,
-  "i18n-ally.pathMatcher": "{locale}.json",
-  "cSpell.language": "en,de-DE",
-  "editor.defaultFormatter": "biomejs.biome-nightly",
-  "editor.formatOnSave": true,
-  "editor.codeActionsOnSave": {
-    "source.fixAll": "always"
-  },
-  "cSpell.words": [
-    "cloudflare",
-    "Provenienzforschung",
-    "rahlwes",
-    "Rahlwes"
-  ],
-  "[astro]": {
-    "editor.defaultFormatter": "astro-build.astro-vscode"
-  },
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[github-actions-workflow]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[markdown]": {
-    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+	"i18n-ally.localesPaths": ["locales"],
+	"i18n-ally.keystyle": "nested",
+	"i18n-ally.sourceLanguage": "de",
+	"i18n-ally.namespace": true,
+	"i18n-ally.pathMatcher": "{locale}.json",
+	"cSpell.language": "en,de-DE",
+	"editor.defaultFormatter": "biomejs.biome-nightly",
+	"editor.formatOnSave": true,
+	"editor.codeActionsOnSave": {
+		"source.fixAll": "always"
+	},
+	"cSpell.words": ["cloudflare", "Provenienzforschung", "rahlwes", "Rahlwes"],
+	"[astro]": {
+		"editor.defaultFormatter": "astro-build.astro-vscode"
+	},
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[json]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[github-actions-workflow]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[markdown]": {
+		"editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	}
 }
